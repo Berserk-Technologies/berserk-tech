@@ -33,6 +33,13 @@
         .nav-link-hover:hover::after {
             width: 100%;
         }
+        /* Mobile menu styling */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.hidden {
+            transform: translateX(100%);
+        }
     </style>
 </head>
 <body class="font-sans text-[#333] leading-relaxed overflow-x-hidden">
@@ -40,54 +47,65 @@
     <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full z-0"></div>
 
     <!-- Header/Navigation -->
-    <header class="fixed top-0 left-0 w-full py-[15px] bg-white/95 shadow-[0_2px_10px_rgba(0,0,0,0.1)] z-[100]">
-        <div class="container mx-auto px-5 max-w-[1200px] flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full py-3 bg-white/95 shadow-[0_2px_10px_rgba(0,0,0,0.1)] z-[100]">
+        <div class="container mx-auto px-4 max-w-[1200px] flex justify-between items-center">
             <div class="flex items-center">
-                <img src="/asset/logo-removebg-preview.png" alt="BERSERK TECHNOLOGIES Logo" class="h-[50px] w-auto">
-                <h3 class="ml-[7px] text-lg font-bold">Berserk Technologies</h3>
+                <img src="/asset/logo-removebg-preview.png" alt="BERSERK TECHNOLOGIES Logo" class="h-10 w-auto">
+                <h3 class="ml-2 text-base font-bold md:text-lg">Berserk Technologies</h3>
             </div>
             <nav class="flex items-center">
-                <ul class="hidden md:flex space-x-[30px]">
+                <ul class="hidden md:flex space-x-6">
                     <li><a href="#services" class="font-semibold text-[#333] hover:text-[#1e80ff] nav-link-hover relative">SERVICES</a></li>
                     <li><a href="#portfolio" class="font-semibold text-[#333] hover:text-[#1e80ff] nav-link-hover relative">PORTFOLIO</a></li>
                     <li><a href="#hire-us" class="font-semibold text-[#333] hover:text-[#1e80ff] nav-link-hover relative">HIRE US</a></li>
                     <li><a href="#about-us" class="font-semibold text-[#333] hover:text-[#1e80ff] nav-link-hover relative">ABOUT US</a></li>
                 </ul>
-                <div class="hidden md:block ml-[30px]">
-                    <a href="#contact" class="inline-block px-[25px] py-[12px] bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer">ENQUIRY</a>
+                <div class="hidden md:block ml-6">
+                    <a href="#contact" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer">ENQUIRY</a>
                 </div>
-                <div class="md:hidden text-[1.5rem] cursor-pointer">
+                <div class="md:hidden text-2xl cursor-pointer" id="menu-toggle">
                     <i class="fas fa-bars text-[#333]"></i>
                 </div>
             </nav>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden md:hidden fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg z-[101] p-4">
+            <button id="close-menu" class="text-2xl text-[#333] mb-4">×</button>
+            <ul class="flex flex-col space-y-4">
+                <li><a href="#services" class="font-semibold text-[#333] hover:text-[#1e80ff]">SERVICES</a></li>
+                <li><a href="#portfolio" class="font-semibold text-[#333] hover:text-[#1e80ff]">PORTFOLIO</a></li>
+                <li><a href="#hire-us" class="font-semibold text-[#333] hover:text-[#1e80ff]">HIRE US</a></li>
+                <li><a href="#about-us" class="font-semibold text-[#333] hover:text-[#1e80ff]">ABOUT US</a></li>
+                <li><a href="#contact" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300">ENQUIRY</a></li>
+            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="flex items-center justify-center text-center h-screen bg-transparent relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px] flex flex-col items-center justify-center">
+        <div class="container mx-auto px-4 max-w-[1200px] flex flex-col items-center justify-center">
             <div class="max-w-[800px] w-full">
-                <h1 class="text-[2.5rem] font-bold text-white mb-5">Berserk Technologies</h1>
-                <p class="text-[1.1rem] text-white mb-[30px]">We go berserk to fuel your growth - IT Solutions, Revenue Cycle Management & Software Development</p>
-                <div class="flex justify-center gap-[15px] mb-[30px]">
-                    <a href="#contact" class="inline-block px-[25px] py-[12px] bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer">Schedule a Free Consultation</a>
+                <h1 class="text-3xl font-bold text-white mb-5 pt-16 sm:text-4xl md:text-5xl">Berserk Technologies</h1>
+                <p class="text-base text-white mb-6 sm:text-lg">We go berserk to fuel your growth - IT Solutions, Revenue Cycle Management & Software Development</p>
+                <div class="flex justify-center gap-3 mb-6">
+                    <a href="#contact" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer text-sm sm:text-base">Schedule a Free Consultation</a>
                 </div>
-                <div class="flex flex-wrap justify-center gap-[15px]">
-                    <div class="w-[150px] h-[160px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center">
-                        <lord-icon src="https://cdn.lordicon.com/xjkryxnf.json" trigger="hover" colors="primary:#000000,secondary:#d1e3fa,tertiary:#104891,quaternary:#9cf4a7" style="width:130px;height:120px"></lord-icon>
-                        <span class="text-sm">Medical Billing</span>
+                <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                    <div class="w-full max-w-[120px] h-[140px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center mx-auto">
+                        <lord-icon src="https://cdn.lordicon.com/xjkryxnf.json" trigger="hover" colors="primary:#000000,secondary:#d1e3fa,tertiary:#104891,quaternary:#9cf4a7" style="width:90px;height:90px"></lord-icon>
+                        <span class="text-xs">Medical Billing</span>
                     </div>
-                    <div class="w-[150px] h-[160px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center">
-                        <lord-icon src="https://cdn.lordicon.com/tyntlpjn.json" trigger="hover" colors="primary:#000000,secondary:#d1e3fa" style="width:130px;height:120px"></lord-icon>
-                        <span class="text-sm">Web Development</span>
+                    <div class="w-full max-w-[120px] h-[140px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center mx-auto">
+                        <lord-icon src="https://cdn.lordicon.com/tyntlpjn.json" trigger="hover" colors="primary:#000000,secondary:#d1e3fa" style="width:90px;height:90px"></lord-icon>
+                        <span class="text-xs">Web Development</span>
                     </div>
-                    <div class="w-[150px] h-[160px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center">
-                        <lord-icon src="https://cdn.lordicon.com/xvmmqwjv.json" trigger="hover" colors="primary:#121331,secondary:#1b1091,tertiary:#d1e3fa,quaternary:#9ce5f4,quinary:#f4dc9c" style="width:130px;height:120px"></lord-icon>
-                        <span class="text-sm">Customer Support</span>
+                    <div class="w-full max-w-[120px] h-[140px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center mx-auto">
+                        <lord-icon src="https://cdn.lordicon.com/xvmmqwjv.json" trigger="hover" colors="primary:#121331,secondary:#1b1091,tertiary:#d1e3fa,quaternary:#9ce5f4,quinary:#f4dc9c" style="width:90px;height:90px"></lord-icon>
+                        <span class="text-xs">Customer Support</span>
                     </div>
-                    <div class="w-[150px] h-[160px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center">
-                        <lord-icon src="https://cdn.lordicon.com/yquwpfkc.json" trigger="hover" colors="primary:#000000,secondary:#9cc2f4,tertiary:#d1e3fa,quaternary:#104891" style="width:130px;height:120px"></lord-icon>
-                        <span class="text-sm">Digital Marketing</span>
+                    <div class="w-full max-w-[120px] h-[140px] bg-[#f0f0f0] rounded-[5px] flex flex-col items-center justify-center mx-auto">
+                        <lord-icon src="https://cdn.lordicon.com/yquwpfkc.json" trigger="hover" colors="primary:#000000,secondary:#9cc2f4,tertiary:#d1e3fa,quaternary:#104891" style="width:90px;height:90px"></lord-icon>
+                        <span class="text-xs">Digital Marketing</span>
                     </div>
                 </div>
             </div>
@@ -95,106 +113,106 @@
     </section>
 
     <!-- Clients Section -->
-    <section class="py-[60px] bg-white relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px]">
-            <h2 class="text-[2rem] font-bold text-center mb-10 text-[#333] h2-underline relative">OUR CLIENTS</h2>
-            <div class="flex flex-wrap justify-between gap-[30px]">
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
-                <div class="w-[120px] h-[60px] bg-[#f0f0f0] rounded-[10px]"></div>
+    <section class="py-12 bg-white relative z-[1]">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <h2 class="text-2xl font-bold text-center mb-8 text-[#333] h2-underline relative sm:text-3xl">OUR CLIENTS</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
+                <div class="w-full h-12 bg-[#f0f0f0] rounded-[10px]"></div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-[80px] bg-[#f5f5f5] relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px]">
-            <h2 class="text-[2rem] font-bold text-center mb-10 text-[#333] h2-underline relative">OUR SERVICES</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                <div class="bg-white p-[30px] rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-[10px] transition duration-300 ease-in-out text-center">
-                    <i class="fas fa-gamepad text-[2.5rem] text-[#1e80ff] mb-5"></i>
-                    <h3 class="text-xl font-bold mb-[15px] text-[#333]">Game Development</h3>
-                    <p class="text-[#333] mb-[15px]">Immersive gaming experiences across multiple platforms with cutting-edge technology.</p>
+    <section id="services" class="py-16 bg-[#f5f5f5] relative z-[1]">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <h2 class="text-2xl font-bold text-center mb-8 text-[#333] h2-underline relative sm:text-3xl">OUR SERVICES</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                    <i class="fas fa-gamepad text-3xl text-[#1e80ff] mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3 text-[#333]">Game Development</h3>
+                    <p class="text-[#333] text-sm">Immersive gaming experiences across multiple platforms with cutting-edge technology.</p>
                 </div>
-                <div class="bg-white p-[30px] rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-[10px] transition duration-300 ease-in-out text-center">
-                    <i class="fas fa-mobile-alt text-[2.5rem] text-[#1e80ff] mb-5"></i>
-                    <h3 class="text-xl font-bold mb-[15px] text-[#333]">Mobile Applications</h3>
-                    <p class="text-[#333] mb-[15px]">Native and cross-platform mobile applications with seamless user experiences.</p>
+                <div class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                    <i class="fas fa-mobile-alt text-3xl text-[#1e80ff] mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3 text-[#333]">Mobile Applications</h3>
+                    <p class="text-[#333] text-sm">Native and cross-platform mobile applications with seamless user experiences.</p>
                 </div>
-                <div class="bg-white p-[30px] rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-[10px] transition duration-300 ease-in-out text-center">
-                    <i class="fas fa-code text-[2.5rem] text-[#1e80ff] mb-5"></i>
-                    <h3 class="text-xl font-bold mb-[15px] text-[#333]">Web Development</h3>
-                    <p class="text-[#333] mb-[15px]">Responsive and dynamic web applications built with modern frameworks.</p>
+                <div class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                    <i class="fas fa-code text-3xl text-[#1e80ff] mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3 text-[#333]">Web Development</h3>
+                    <p class="text-[#333] text-sm">Responsive and dynamic web applications built with modern frameworks.</p>
                 </div>
-                <div class="bg-white p-[30px] rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-[10px] transition duration-300 ease-in-out text-center">
-                    <i class="fas fa-vr-cardboard text-[2.5rem] text-[#1e80ff] mb-5"></i>
-                    <h3 class="text-xl font-bold mb-[15px] text-[#333]">AR/VR Solutions</h3>
-                    <p class="text-[#333] mb-[15px]">Augmented and virtual reality experiences for gaming and enterprise applications.</p>
+                <div class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition duration-300 ease-in-out text-center">
+                    <i class="fas fa-vr-cardboard text-3xl text-[#1e80ff] mb-4"></i>
+                    <h3 class="text-lg font-bold mb-3 text-[#333]">AR/VR Solutions</h3>
+                    <p class="text-[#333] text-sm">Augmented and virtual reality experiences for gaming and enterprise applications.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-[80px] bg-white/90 relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px]">
-            <h2 class="text-[2rem] font-bold text-center mb-10 text-[#333] h2-underline relative">FEATURED PROJECTS</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[30px]">
-                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-[10px] transition duration-300 ease-in-out">
-                    <div class="h-[200px] bg-[#f0f0f0]"></div>
-                    <h3 class="text-xl font-bold px-5 pt-5 pb-[5px] text-[#333]">Project Title</h3>
-                    <p class="text-[#666] px-5 pb-5">Game Development</p>
+    <section id="portfolio" class="py-16 bg-white/90 relative z-[1]">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <h2 class="text-2xl font-bold text-center mb-8 text-[#333] h2-underline relative sm:text-3xl">FEATURED PROJECTS</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="h-40 bg-[#f0f0f0]"></div>
+                    <h3 class="text-lg font-bold px-4 pt-4 pb-1 text-[#333]">Project Title</h3>
+                    <p class="text-[#666] px-4 pb-4 text-sm">Game Development</p>
                 </div>
-                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-[10px] transition duration-300 ease-in-out">
-                    <div class="h-[200px] bg-[#f0f0f0]"></div>
-                    <h3 class="text-xl font-bold px-5 pt-5 pb-[5px] text-[#333]">Project Title</h3>
-                    <p class="text-[#666] px-5 pb-5">Mobile Application</p>
+                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="h-40 bg-[#f0f0f0]"></div>
+                    <h3 class="text-lg font-bold px-4 pt-4 pb-1 text-[#333]">Project Title</h3>
+                    <p class="text-[#666] px-4 pb-4 text-sm">Mobile Application</p>
                 </div>
-                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-[10px] transition duration-300 ease-in-out">
-                    <div class="h-[200px] bg-[#f0f0f0]"></div>
-                    <h3 class="text-xl font-bold px-5 pt-5 pb-[5px] text-[#333]">Project Title</h3>
-                    <p class="text-[#666] px-5 pb-5">Web Development</p>
+                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="h-40 bg-[#f0f0f0]"></div>
+                    <h3 class="text-lg font-bold px-4 pt-4 pb-1 text-[#333]">Project Title</h3>
+                    <p class="text-[#666] px-4 pb-4 text-sm">Web Development</p>
                 </div>
-                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-[10px] transition duration-300 ease-in-out">
-                    <div class="h-[200px] bg-[#f0f0f0]"></div>
-                    <h3 class="text-xl font-bold px-5 pt-5 pb-[5px] text-[#333]">Project Title</h3>
-                    <p class="text-[#666] px-5 pb-5">AR/VR Solution</p>
+                <div class="bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.05)] hover:-translate-y-2 transition duration-300 ease-in-out">
+                    <div class="h-40 bg-[#f0f0f0]"></div>
+                    <h3 class="text-lg font-bold px-4 pt-4 pb-1 text-[#333]">Project Title</h3>
+                    <p class="text-[#666] px-4 pb-4 text-sm">AR/VR Solution</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-[80px] bg-[#f5f5f5] relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px]">
-            <h2 class="text-[2rem] font-bold text-center mb-10 text-[#333] h2-underline relative">GET IN TOUCH</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-[30px]">
-                <div class="bg-[#1e80ff] text-white p-[30px] rounded-[5px]">
-                    <h3 class="text-xl font-bold mb-5">Contact Information</h3>
-                    <p class="mb-[15px]"><i class="fas fa-map-marker-alt mr-[10px]"></i> 123 Tech Street, Digital City</p>
-                    <p class="mb-[15px]"><i class="fas fa-phone mr-[10px]"></i> +1 (555) 123-4567</p>
-                    <p><i class="fas fa-envelope mr-[10px]"></i> info@berserktech.com</p>
+    <section id="contact" class="py-16 bg-[#f5f5f5] relative z-[1]">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <h2 class="text-2xl font-bold text-center mb-8 text-[#333] h2-underline relative sm:text-3xl">GET IN TOUCH</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-6">
+                <div class="bg-[#1e80ff] text-white p-6 rounded-[5px]">
+                    <h3 class="text-lg font-bold mb-4">Contact Information</h3>
+                    <p class="mb-3"><i class="fas fa-map-marker-alt mr-2"></i> 123 Tech Street, Digital City</p>
+                    <p class="mb-3"><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope mr-2"></i> info@berserktech.com</p>
                 </div>
-                <div class="bg-white p-[30px] rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
+                <div class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
                     <form>
-                        <div class="mb-5">
-                            <input type="text" placeholder="Your Name" required class="w-full px-[15px] py-[12px] border border-[#e0e0e0] rounded text-base focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Your Name" required class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                         </div>
-                        <div class="mb-5">
-                            <input type="email" placeholder="Your Email" required class="w-full px-[15px] py-[12px] border border-[#e0e0e0] rounded text-base focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                        <div class="mb-4">
+                            <input type="email" placeholder="Your Email" required class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                         </div>
-                        <div class="mb-5">
-                            <input type="text" placeholder="Subject" class="w-full px-[15px] py-[12px] border border-[#e0e0e0] rounded text-base focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                        <div class="mb-4">
+                            <input type="text" placeholder="Subject" class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                         </div>
-                        <div class="mb-5">
-                            <textarea placeholder="Your Message" rows="5" required class="w-full px-[15px] py-[12px] border border-[#e0e0e0] rounded resize-y text-base focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
+                        <div class="mb-4">
+                            <textarea placeholder="Your Message" rows="5" required class="w-full px-3 py-2 border border-[#e0e0e0] rounded resize-y text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
                         </div>
-                        <button type="submit" class="inline-block px-[25px] py-[12px] bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer">Send Message</button>
+                        <button type="submit" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer text-sm sm:text-base">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -202,64 +220,59 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black text-white pt-[60px] pb-5 relative z-[1]">
-        <div class="container mx-auto px-5 max-w-[1200px]">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px] mb-10">
+    <footer class="bg-black text-white pt-12 pb-4 relative z-[1]">
+        <div class="container mx-auto px-4 max-w-[1200px]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div class="text-center md:text-left">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_7gd0c57gd0c57gd0.jpg-NU9VHo0jAgBBZDgPcdypWiS71Tgiw2.jpeg" alt="BERSERK TECHNOLOGIES Logo" class="h-[50px] mb-[15px] mx-auto md:mx-0">
-                    <p>Driving Innovation Through Technology</p>
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_7gd0c57gd0c57gd0.jpg-NU9VHo0jAgBBZDgPcdypWiS71Tgiw2.jpeg" alt="BERSERK TECHNOLOGIES Logo" class="h-10 mb-3 mx-auto md:mx-0">
+                    <p class="text-sm">Driving Innovation Through Technology</p>
                 </div>
                 <div class="text-center md:text-left">
-                    <h3 class="text-[1.2rem] font-bold mb-5">Quick Links</h3>
-                    <ul class="space-y-[10px]">
-                        <li><a href="#services" class="hover:text-[#1e80ff] transition duration-300 ease-in-out">Services</a></li>
-                        <li><a href="#portfolio" class="hover:text-[#1e80ff] transition duration-300 ease-in-out">Portfolio</a></li>
-                        <li><a href="#hire-us" class="hover:text-[#1e80ff] transition duration-300 ease-in-out">Hire Us</a></li>
-                        <li><a href="#about-us" class="hover:text-[#1e80ff] transition duration-300 ease-in-out">About Us</a></li>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-[#1e80ff] transition duration-300 ease-in-out text-sm">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-[#1e80ff] transition duration-300 ease-in-out text-sm">Portfolio</a></li>
+                        <li><a href="#hire-us" class="hover:text-[#1e80ff] transition duration-300 ease-in-out text-sm">Hire Us</a></li>
+                        <li><a href="#about-us" class="hover:text-[#1e80ff] transition duration-300 ease-in-out text-sm">About Us</a></li>
                     </ul>
                 </div>
                 <div class="text-center md:text-left">
-                    <h3 class="text-[1.2rem] font-bold mb-5">Connect With Us</h3>
-                    <div class="flex justify-center md:justify-start gap-[15px]">
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-instagram"></i></a>
+                    <h3 class="text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex justify-center md:justify-start gap-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#1e80ff] transition duration-300 ease-in-out"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="text-center pt-5 border-t border-white/10">
-                <p>© 2025 BERSERK TECHNOLOGIES. All Rights Reserved.</p>
+            <div class="text-center pt-4 border-t border-white/10">
+                <p class="text-sm">© 2025 BERSERK TECHNOLOGIES. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Sticky Contact Form -->
-    <div id="sticky-contact-form" class="fixed top-1/2 right-0 transform -translate-y-1/2 bg-white border border-[#e0e0e0] border-r-0 shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[300px] p-5 z-[1000] hidden md:block">
-        <button id="close-form" class="absolute top-[10px] right-[10px] text-xl text-[#666] cursor-pointer bg-transparent border-none hover:text-[#333] transition duration-300 ease-in-out">×</button>
-        <form class="flex flex-col gap-[10px]">
-            <label for="full-name" class="text-xs text-[#666] uppercase mb-[5px]">FULL NAME</label>
+    <!-- <div id="sticky-contact-form" class="fixed top-1/2 right-0 transform -translate-y-1/2 bg-white border border-[#e0e0e0] border-r-0 shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[280px] p-4 z-[1000] hidden lg:block">
+        <button id="close-form" class="absolute top-2 right-2 text-xl text-[#666] cursor-pointer bg-transparent border-none hover:text-[#333] transition duration-300 ease-in-out">×</button>
+        <form class="flex flex-col gap-3">
+            <label for="full-name" class="text-xs text-[#666] uppercase">FULL NAME</label>
             <input type="text" id="full-name" placeholder="Full Name" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="email" class="text-xs text-[#666] uppercase mb-[5px]">EMAIL</label>
+            <label for="email" class="text-xs text-[#666] uppercase">EMAIL</label>
             <input type="email" id="email" placeholder="Email" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="phone" class="text-xs text-[#666] uppercase mb-[5px]">PHONE</label>
+            <label for="phone" class="text-xs text-[#666] uppercase">PHONE</label>
             <input type="tel" id="phone" placeholder="Phone" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="message" class="text-xs text-[#666] uppercase mb-[5px]">MESSAGE</label>
-            <textarea id="message" placeholder="Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-[60px] resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
-            <button type="submit" class="inline-block px-[25px] py-[12px] bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer mt-[10px]">SEND</button>
+            <label for="message" class="text-xs text-[#666] uppercase">MESSAGE</label>
+            <textarea id="message" placeholder="Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-16 resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
+            <button type="submit" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer mt-2 text-sm">SEND</button>
         </form>
-        <div class="absolute -left-[70px] top-1/2 -translate-y-1/2 -rotate-90 bg-[#1e80ff] text-white px-[10px] py-[5px] text-sm font-bold uppercase">QUICK CONNECT</div>
-    </div>
+        <div class="absolute -left-[60px] top-1/2 -translate-y-1/2 -rotate-90 bg-[#1e80ff] text-white px-2 py-1 text-xs font-bold uppercase">QUICK CONNECT</div>
+    </div> -->
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    <script src="script.js"></script>
-    <script>
-        document.getElementById('close-form').addEventListener('click', function() {
-            document.getElementById('sticky-contact-form').classList.add('hidden');
-        });
-    </script>
+     <script src="/script.js"></script>
 </body>
 </html>

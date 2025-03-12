@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
   minWidth: 200.00,
   scale: 1.00,
   scaleMobile: 1.00,
-  color: 0x94a2fa,
+  color: 0x94a2fa, 
+  //color: 0x1e80ff,
   backgroundColor: 0x0
       });
   } else {
@@ -19,19 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const closeButton = document.getElementById('close-form');
-    const form = document.getElementById('sticky-contact-form');
+// Mobile menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeMenu = document.getElementById('close-menu');
 
-    if (closeButton && form) {
-        closeButton.addEventListener('click', function() {
-            // Remove md:block and add hidden to ensure it hides on all screens
-            form.classList.remove('md:block');
-            form.classList.add('hidden');
-        });
-    } else {
-        console.error('Close button or form not found in the DOM');
-    }
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+});
+
+// Sticky form close
+document.getElementById('close-form').addEventListener('click', () => {
+    document.getElementById('sticky-contact-form').classList.add('hidden');
 });
 
 
