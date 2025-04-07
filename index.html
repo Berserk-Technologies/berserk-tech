@@ -10,39 +10,50 @@
         <link rel="icon" type="image/png" href="/asset/logo_removedBG.png">
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
-        /* Custom h2 underline */
-        .h2-underline::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #1e80ff;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        /* Custom nav link hover underline */
-        .nav-link-hover::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #1e80ff;
-            transition: width 0.3s ease;
-        }
-        .nav-link-hover:hover::after {
-            width: 100%;
-        }
-        /* Mobile menu styling */
-        .mobile-menu {
-            transition: transform 0.3s ease-in-out;
-        }
-        .mobile-menu.hidden {
-            transform: translateX(100%);
-        }
+       /* Custom h2 underline */
+       .h2-underline::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 3px;
+                background-color: #1e80ff;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            /* Custom nav link hover underline */
+            .nav-link-hover::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: -5px;
+                left: 0;
+                background-color: #1e80ff;
+                transition: width 0.3s ease;
+            }
+            .nav-link-hover:hover::after {
+                width: 100%;
+            }
+            /* Mobile menu styling */
+            .mobile-menu {
+                transition: transform 0.3s ease-in-out;
+            }
+            .mobile-menu.hidden {
+                transform: translateX(100%);
+            }
+            /* Slide-in animation for sticky form */
+            @keyframes slideIn {
+                from { transform: translateX(100%) translateY(-50%); }
+                to { transform: translateX(0) translateY(-50%); }
+            }
+            .form-hidden {
+                transform: translateX(100%) translateY(-50%);
+            }
+            .form-visible {
+                animation: slideIn 0.5s ease-out forwards;
+            }
     </style>
     </head>
     <body class="font-sans text-[#333] leading-relaxed overflow-x-hidden">
@@ -95,10 +106,10 @@
                             class="font-semibold text-[#333] hover:text-[#1e80ff]">SERVICES</a></li>
                     <li><a href="#articles"
                             class="font-semibold text-[#333] hover:text-[#1e80ff]">FEATURED POSTS</a></li>
-                    <li><a href="#hire-us"
+                    <li><a href="#contact"
                             class="font-semibold text-[#333] hover:text-[#1e80ff]">HIRE
                             US</a></li>
-                    <li><a href="#about-us"
+                    <li><a href="#our_mission"
                             class="font-semibold text-[#333] hover:text-[#1e80ff]">ABOUT
                             US</a></li>
                     <li><a href="#contact"
@@ -118,7 +129,7 @@
                     <div class="flex items-center gap-2">
                         <i class="fas fa-envelope text-[#bde7ff] text-lg"></i>
                         <a href="mailto:info@berserktech.com"
-                            class="text-[#bde7ff] hover:text-[#bde7ff] transition duration-300">info@berserktech.com</a>
+                            class="text-[#bde7ff] hover:text-[#bde7ff] transition duration-300">info@berserktechnologies.com</a>
                     </div>
                     <div class="flex items-center gap-2">
                         <i class="fas fa-phone text-[#bde7ff] text-lg"></i>
@@ -399,7 +410,7 @@
                 </div>
                 <div class="absolute top-4 left-4">
                   <span class="bg-black bg-opacity-75 text-white px-3 py-1 rounded-md text-sm font-medium">
-                    Berserk Technology
+                    Berserk Technologies
                   </span>
                 </div>
               </div>
@@ -408,7 +419,7 @@
               <div class="max-w-3xl mx-auto text-gray-900">
                 <!-- <h3 class="text-2xl font-bold mb-4">Our Mission</h3> -->
                 <p class="mb-4 text-lg leading-relaxed">
-                  At Berserk Technology, we push the boundaries of what's possible. Our team of innovative minds works tirelessly to create cutting-edge solutions that transform industries and empower businesses worldwide.
+                  At Berserk Technologies, we push the boundaries of what's possible. Our team of innovative minds works tirelessly to create cutting-edge solutions that transform industries and empower businesses worldwide.
                 </p>
                 
               </div>
@@ -457,8 +468,8 @@
                         <h3 class="text-lg font-bold mb-4">Contact
                             Information</h3>
                         <p class="mb-3"><i
-                                class="fas fa-map-marker-alt mr-2"></i> 123 Tech
-                            Street, Digital City</p>
+                                class="fas fa-map-marker-alt mr-2"></i> 123 D Block,
+                            Sector V, Kolkata</p>
                         <p class="mb-3"><i class="fas fa-phone mr-2"></i> +1
                             (555) 123-4567</p>
                         <p><i class="fas fa-envelope mr-2"></i>
@@ -474,6 +485,11 @@
                             </div>
                             <div class="mb-4">
                                 <input type="email" placeholder="Your Email"
+                                    required
+                                    class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                            </div>
+                            <div class="mb-4">
+                                <input type="phoneS" placeholder="Your Phone Number"
                                     required
                                     class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                             </div>
@@ -550,21 +566,37 @@
         </footer>
 
         <!-- Sticky Contact Form -->
-        <!-- <div id="sticky-contact-form" class="fixed top-1/2 right-0 transform -translate-y-1/2 bg-white border border-[#e0e0e0] border-r-0 shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[280px] p-4 z-[1000] hidden lg:block">
-        <button id="close-form" class="absolute top-2 right-2 text-xl text-[#666] cursor-pointer bg-transparent border-none hover:text-[#333] transition duration-300 ease-in-out">×</button>
-        <form class="flex flex-col gap-3">
-            <label for="full-name" class="text-xs text-[#666] uppercase">FULL NAME</label>
-            <input type="text" id="full-name" placeholder="Full Name" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="email" class="text-xs text-[#666] uppercase">EMAIL</label>
-            <input type="email" id="email" placeholder="Email" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="phone" class="text-xs text-[#666] uppercase">PHONE</label>
-            <input type="tel" id="phone" placeholder="Phone" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-            <label for="message" class="text-xs text-[#666] uppercase">MESSAGE</label>
-            <textarea id="message" placeholder="Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-16 resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
-            <button type="submit" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer mt-2 text-sm">SEND</button>
-        </form>
-        <div class="absolute -left-[60px] top-1/2 -translate-y-1/2 -rotate-90 bg-[#1e80ff] text-white px-2 py-1 text-xs font-bold uppercase">QUICK CONNECT</div>
-    </div> -->
+
+        <!-- Overlay for closing form -->
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-[999]"></div>
+
+        <!-- Sticky Contact Form -->
+        <div id="sticky-contact-form" class="fixed top-1/2 right-0 bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[280px] p-4 z-[1000] form-hidden rounded-l-lg">
+            <button id="close-form" class="absolute top-2 right-2 text-xl text-[#666] cursor-pointer hover:text-[#333] transition duration-300 ease-in-out">×</button>
+            <h3 class="text-lg font-bold mb-4 text-[#333]">Quick Contact</h3>
+            <form class="flex flex-col gap-3">
+                <input type="text" placeholder="Your Name" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                <input type="email" placeholder="Your Email" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                <input type="phone" placeholder="Your Phone Number" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                <input type="text" placeholder="Subject" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
+                <textarea placeholder="Your Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-16 resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
+                <button type="submit" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer text-sm">Send</button>
+            </form>
+            <div class="flex justify-around mt-4">
+                <a href="https://wa.me/8250498848" target="_blank" class="text-green-500 hover:text-green-600">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+                <a href="mailto:info@berserktech.com" class="text-blue-500 hover:text-blue-600">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
+                <a href="tel:+919641958042" class="text-gray-700 hover:text-gray-800">
+                    <i class="fas fa-phone fa-2x"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true" target="_blank" class="text-blue-700 hover:text-blue-800">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+            </div>
+        </div>
 
         <!-- Scripts -->
         <script
