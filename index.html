@@ -477,7 +477,7 @@
                     </div>
                     <div
                         class="bg-white p-6 rounded-[5px] shadow-[0_5px_15px_rgba(0,0,0,0.05)]">
-                        <form name="contact" method="POST" data-netlify="true" onsubmit="submit">
+                        <form name="main-contact"  method="POST" data-netlify="true" onsubmit="submit">
                             <div class="mb-4">
                                 <input type="text" name="name" id="name" placeholder="Your Name"
                                     required
@@ -498,7 +498,7 @@
                                     class="w-full px-3 py-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                             </div>
                             <div class="mb-4">
-                                <textarea name="massage" id="massage" placeholder="Your Message" rows="5"
+                                <textarea name="message" id="message" placeholder="Your Message" rows="5"
                                     required
                                     class="w-full px-3 py-2 border border-[#e0e0e0] rounded resize-y text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
                             </div>
@@ -574,12 +574,12 @@
         <div id="sticky-contact-form" class="fixed top-1/2 right-0 bg-white shadow-[0_0_10px_rgba(0,0,0,0.1)] w-[280px] p-4 z-[1000] form-hidden rounded-l-lg">
             <button id="close-form" class="absolute top-2 right-2 text-xl text-[#666] cursor-pointer hover:text-[#333] transition duration-300 ease-in-out">×</button>
             <h3 class="text-lg font-bold mb-4 text-[#333]">Quick Contact</h3>
-            <form name="contact" method="POST" data-netlify="true" onsubmit="submit" class="flex flex-col gap-3">
+            <form name="sticky-contact" method="POST" data-netlify="true" onsubmit="submit" class="flex flex-col gap-3">
                 <input name="name"  type="text" id="name" placeholder="Your Name" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                 <input name="email" type="email" id="email" placeholder="Your Email" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                 <input name="phone" type="phone" id="phone" placeholder="Your Phone Number" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
                 <input name="subject" type="text" id="subject" placeholder="Subject" required class="w-full p-2 border border-[#e0e0e0] rounded text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]">
-                <textarea name="massage" id="massage" placeholder="Your Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-16 resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
+                <textarea name="message" id="message" placeholder="Your Message" required class="w-full p-2 border border-[#e0e0e0] rounded h-16 resize-none text-sm focus:outline-none focus:ring-2 focus:ring-[#1e80ff]"></textarea>
                 <button type="submit" id="submit" class="inline-block px-4 py-2 bg-[#1e80ff] text-white font-semibold uppercase rounded hover:bg-[#104891] transition duration-300 ease-in-out cursor-pointer text-sm">Send</button>
             </form>
             <div class="flex justify-around mt-4">

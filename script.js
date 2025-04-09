@@ -1,18 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to initialize or update Vanta.js with responsive spacing
+    // Vanta.js Background Animation
     let vantaEffect = null;
 
     function initVanta() {
-        // Destroy existing effect if it exists
         if (vantaEffect) {
             vantaEffect.destroy();
         }
 
-        // Set spacing based on screen width
-        const isMobile = window.innerWidth < 768; // Matches Tailwind's md breakpoint
-        const spacingValue = isMobile ? 30 : 15; // Larger spacing for mobile, default for desktop
+        const isMobile = window.innerWidth < 768;
+        const spacingValue = isMobile ? 30 : 15;
 
-        // Initialize Vanta.js background
         if (typeof VANTA !== 'undefined') {
             vantaEffect = VANTA.NET({
                 el: "#vanta-bg",
@@ -25,22 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 scaleMobile: 1.00,
                 color: 0x94a2fa,
                 backgroundColor: 0x0,
-                spacing: spacingValue // Dynamic spacing
+                spacing: spacingValue
             });
         } else {
-            console.error('VANTA.NET is not defined. Make sure Vanta.js is properly included.');
+            console.error('VANTA.NET is not defined. Ensure Vanta.js is included.');
         }
     }
 
-    // Initial call to set up Vanta
     initVanta();
+    window.addEventListener('resize', initVanta);
 
-    // Update Vanta on window resize
-    window.addEventListener('resize', function() {
-        initVanta();
-    });
-
-    // Mobile menu toggle
+    // Mobile Menu Toggle
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenu = document.getElementById('close-menu');
@@ -53,80 +45,61 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenu.classList.add('hidden');
     });
 
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contact-form');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('close-form');
-
-    // Show form with slide animation after 2 seconds
-    setTimeout(() => {
-        form.classList.remove('form-hidden');
-        form.classList.add('form-visible');
-        overlay.classList.remove('hidden');
-    }, 3000);
-
-    // Close form function
-    function closeForm() {
-        form.classList.remove('form-visible');
-        form.classList.add('form-hidden');
-        overlay.classList.add('hidden');
-    }
-
-    // Close form on button click
-    closeBtn.addEventListener('click', closeForm);
-
-    // Close form on outside click
-    overlay.addEventListener('click', closeForm);
-
-    // Optional: Handle form submission (no auto-close here as per request)
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('Form submitted (add backend logic here)');
-        // You can add your submission logic here
-    });
-});
-
-
-    // Sticky form functionality
-    const form = document.getElementById('sticky-contact-form');
+    // Sticky Form Functionality
+    const stickyForm = document.getElementById('sticky-contact-form');
     const overlay = document.getElementById('overlay');
     const closeFormBtn = document.getElementById('close-form');
 
-    // Show form after 2 seconds
-    setTimeout(() => {
-        form.classList.remove('form-hidden');
-        form.classList.add('form-visible');
-        overlay.classList.remove('hidden');
-    }, 2000);
-
-    // Close form function
-    function closeForm() {
-        form.classList.remove('form-visible');
-        form.classList.add('form-hidden');
+    function closeStickyForm() {
+        stickyForm.classList.remove('form-visible');
+        stickyForm.classList.add('form-hidden');
         overlay.classList.add('hidden');
     }
 
-    // Close form on button click
-    closeFormBtn.addEventListener('click', closeForm);
+    setTimeout(() => {
+        stickyForm.classList.remove('form-hidden');
+        stickyForm.classList.add('form-visible');
+        overlay.classList.remove('hidden');
+    }, 3000);
 
-    // Close form on outside click
-    overlay.addEventListener('click', closeForm);
+    closeFormBtn.addEventListener('click', closeStickyForm);
+    overlay.addEventListener('click', closeStickyForm);
 
-    const handleSubmit = event => {
+    // Form Submission Handling for Both Forms
+    const handleSubmit = (event) => {
         event.preventDefault();
-      
+
         const myForm = event.target;
         const formData = new FormData(myForm);
-      
+        const submitButton = myForm.querySelector('button[type="submit"]');
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
         fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
         })
-          .then(() => console.log("Form successfully submitted"))
-          .catch(error => alert(error));
-      };
-      
-      document.querySelector("form").addEventListener("submit", handleSubmit);
+        .then(() => {
+            myForm.reset();
+            submitButton.textContent = "Sent!";
+            alert("Thank you! Your message has been submitted successfully.");
+            setTimeout(() => {
+                submitButton.textContent = myForm.name === "main-contact" ? "Send Message" : "Send";
+                submitButton.disabled = false;
+            }, 2000);
+        })
+        .catch((error) => {
+            console.error("Form submission error:", error);
+            alert("Oops! Something went wrong. Please try again later.");
+            submitButton.textContent = myForm.name === "main-contact" ? "Send Message" : "Send";
+            submitButton.disabled = false;
+        });
+    };
+
+    // Apply submission handler to both forms
+    document.querySelectorAll('form').forEach((form) => {
+        form.addEventListener('submit', handleSubmit);
+    });
+});
