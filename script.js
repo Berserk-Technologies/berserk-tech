@@ -114,9 +114,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close form on outside click
     overlay.addEventListener('click', closeForm);
 
-    // Form submission (basic console log - add your backend logic here)
-    form.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('Form submitted');
-        // Add your submission logic here if needed
-    });
+    const handleSubmit = event => {
+        event.preventDefault();
+      
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+      
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+          .then(() => console.log("Form successfully submitted"))
+          .catch(error => alert(error));
+      };
+      
+      document.querySelector("form").addEventListener("submit", handleSubmit);
