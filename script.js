@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 scaleMobile: 1.00,
                 color: 0x94a2fa,
                 backgroundColor: 0x0,
+                points: 8.00,
                 spacing: spacingValue
             });
         } else {
