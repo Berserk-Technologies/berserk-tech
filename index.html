@@ -168,104 +168,425 @@
         <section class="py-6 sm:py-8 md:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white">
             <div class="max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto">
                 <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed text-gray-700">
-                    <span class="text-black font-semibold">Supercharge your business with every tech solution you need—right under one roof.</span> 
-                    <span class="text-black font-semibold"> We craft</span> 
-                    <span class="text-[#1685c9] font-bold">Web Development</span> 
+                    <span class="text-black font-semibold">Supercharge your business with all the tech solutions you need—under one roof.</span> 
+                    <span class="text-black font-semibold"> We deliver</span> 
+                    <span class="text-[#0d4a7a] font-extrabold">Web Development</span> 
                     <span class="text-black font-semibold"> that elevates your brand,</span> 
-                    <span class="text-[#1685c9] font-bold">Digital Marketing</span> 
-                    <span class="text-black font-semibold"> that amplifies your reach,</span> 
-                    <span class="text-[#1685c9] font-bold">Cyber Security</span> 
-                    <span class="text-black font-semibold"> that strengthens every layer, and</span> 
-                    <span class="text-[#1685c9] font-bold">AI Automation</span> 
-                    <span class="text-black font-semibold"> that transforms internal operations.</span> 
-                    <span class="text-black font-semibold"> You focus on growth—we accelerate your success with intelligent, seamless innovation.</span>
+                    <span class="text-[#0d4a7a] font-extrabold">Digital Marketing</span> 
+                    <span class="text-black font-semibold"> that boosts your reach,</span> 
+                    <span class="text-[#0d4a7a] font-extrabold">Cyber Security</span> 
+                    <span class="text-black font-semibold"> that protects every layer, and</span> 
+                    <span class="text-[#0d4a7a] font-extrabold">AI Automation</span> 
+                    <span class="text-black font-semibold"> that streamlines your operations.</span> 
+                    <span class="text-black font-semibold"> You focus on growth— we accelerate your success with intelligent, seamless innovation.</span>
                 </p>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <section id="services" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
             <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-12 sm:mb-16 lg:mb-20">
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Our Expertise</h2>
-                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">Delivering cutting-edge solutions that drive innovation and transform businesses across industries.</p>
+                <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">Our Expertise</h2>
+                    <p class="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">Delivering cutting-edge solutions that drive innovation and transform businesses across industries.</p>
                 </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                
+                <!-- Navigation Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+                    <button onclick="showService(0)" class="service-nav-btn active px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-r from-[#0d4a7a] to-[#0a3a62] text-white rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm lg:text-base shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <span>Web Development</span>
+                    </button>
+                    <button onclick="showService(1)" class="service-nav-btn px-4 sm:px-5 py-2.5 sm:py-3 bg-white text-gray-700 border border-gray-200 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm lg:text-base hover:bg-gray-50 hover:border-[#0d4a7a] transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        <span>Digital Marketing</span>
+                    </button>
+                    <button onclick="showService(2)" class="service-nav-btn px-4 sm:px-5 py-2.5 sm:py-3 bg-white text-gray-700 border border-gray-200 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm lg:text-base hover:bg-gray-50 hover:border-[#0d4a7a] transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                        <span>Cyber Security</span>
+                    </button>
+                    <button onclick="showService(3)" class="service-nav-btn px-4 sm:px-5 py-2.5 sm:py-3 bg-white text-gray-700 border border-gray-200 rounded-lg sm:rounded-xl font-semibold text-xs sm:text-sm lg:text-base hover:bg-gray-50 hover:border-[#0d4a7a] transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                        <span>AI Automation</span>
+                    </button>
+                </div>
+
+                <!-- Service Cards -->
+                <div class="relative">
                     <!-- Service 1 - Web Development -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="asset/web development post.png" alt="Web Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg mb-3">
-                                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                    </svg>
+                    <div id="service-0" class="service-card active bg-blue-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-blue-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-10 sm:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">Web Development</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                                    Build stunning, high-performance websites and web applications that drive engagement and deliver exceptional user experiences.
+                                </p>
+                                <div class="space-y-2">
+                                    <button onclick="toggleSubService(0, 0)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Custom Website Development</span>
+                                        <svg id="icon-0-0" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-0" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Professional custom websites tailored to your business needs with modern design and functionality.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 1)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>E-commerce Development (Shopify / WooCommerce)</span>
+                                        <svg id="icon-0-1" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-1" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Complete e-commerce solutions on Shopify or WooCommerce platforms for seamless online selling.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 2)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Web App Development</span>
+                                        <svg id="icon-0-2" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-2" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Scalable web applications built with modern frameworks for enhanced functionality and performance.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 3)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>UI/UX Design</span>
+                                        <svg id="icon-0-3" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-3" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">User-centered design solutions that create intuitive and engaging digital experiences.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 4)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Landing Page Design</span>
+                                        <svg id="icon-0-4" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-4" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">High-converting landing pages designed to maximize conversions and user engagement.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 5)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Website Redesign</span>
+                                        <svg id="icon-0-5" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-5" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Transform your existing website with modern design and improved functionality.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 6)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Performance Optimization</span>
+                                        <svg id="icon-0-6" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-6" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Speed up your website with advanced optimization techniques for better user experience.</div>
+                                    
+                                    <button onclick="toggleSubService(0, 7)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>CMS Development (WordPress, Headless CMS)</span>
+                                        <svg id="icon-0-7" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-0-7" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Flexible content management solutions using WordPress or headless CMS architectures.</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h5 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Web Development</h5>
-                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Build stunning, high-performance websites and web applications that drive engagement and deliver exceptional user experiences.</p>
+                            <div class="relative h-56 sm:h-64 lg:h-[450px] p-5 sm:p-6 lg:p-8 flex items-center justify-center order-1 lg:order-2 group">
+                                <img src="asset/web development post.png" alt="Web Development" class="w-full h-full object-cover rounded-xl sm:rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-5 sm:inset-6 lg:inset-8 bg-gradient-to-l from-blue-50/0 via-transparent to-blue-50/5 rounded-xl sm:rounded-2xl pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Service 2 - Digital Marketing -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="asset/digital marketing post.png" alt="Digital Marketing" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg mb-3">
-                                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                                    </svg>
+                    <div id="service-1" class="service-card hidden bg-blue-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-blue-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-10 sm:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">Digital Marketing</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                                    Maximize online visibility with paid ads, social media, and strategic SEO to drive targeted traffic and higher conversions.
+                                </p>
+                                <div class="space-y-2">
+                                    <button onclick="toggleSubService(1, 0)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>SEO (Search Engine Optimization)</span>
+                                        <svg id="icon-1-0" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-0" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Improve your search engine rankings and organic visibility with proven SEO strategies.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 1)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Social Media Marketing (SMM)</span>
+                                        <svg id="icon-1-1" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-1" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Engage your audience and build brand presence across all major social media platforms.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 2)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Google Ads / Meta Ads</span>
+                                        <svg id="icon-1-2" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-2" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Targeted paid advertising campaigns on Google and Meta platforms for maximum ROI.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 3)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Performance Marketing</span>
+                                        <svg id="icon-1-3" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-3" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Data-driven marketing strategies focused on measurable results and conversions.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 4)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Content Marketing</span>
+                                        <svg id="icon-1-4" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-4" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Create valuable, engaging content that attracts and converts your target audience.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 5)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Email Marketing</span>
+                                        <svg id="icon-1-5" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-5" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Nurture leads and retain customers with personalized email campaigns.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 6)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Branding & Creative Strategy</span>
+                                        <svg id="icon-1-6" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-6" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Develop a strong brand identity and creative strategies that resonate with your audience.</div>
+                                    
+                                    <button onclick="toggleSubService(1, 7)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Conversion Rate Optimization (CRO)</span>
+                                        <svg id="icon-1-7" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-1-7" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Optimize your website and campaigns to maximize conversion rates and ROI.</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h5 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Digital Marketing</h5>
-                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Maximize online visibility with paid ads, social media, and strategic SEO to drive targeted traffic and higher conversions.</p>
+                            <div class="relative h-56 sm:h-64 lg:h-[450px] p-5 sm:p-6 lg:p-8 flex items-center justify-center order-1 lg:order-2 group">
+                                <img src="asset/digital marketing post.png" alt="Digital Marketing" class="w-full h-full object-cover rounded-xl sm:rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-5 sm:inset-6 lg:inset-8 bg-gradient-to-l from-blue-50/0 via-transparent to-blue-50/5 rounded-xl sm:rounded-2xl pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Service 3 - Cyber Security -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="asset/upscalemedia-transformed.png" alt="Cyber Security" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg mb-3">
-                                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                                    </svg>
+                    <div id="service-2" class="service-card hidden bg-blue-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-blue-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-10 sm:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">Cyber Security</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                                    Protect your digital assets with advanced security solutions, threat detection, and comprehensive vulnerability assessments.
+                                </p>
+                                <div class="space-y-2">
+                                    <button onclick="toggleSubService(2, 0)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Vulnerability Assessment & Penetration Testing (VAPT)</span>
+                                        <svg id="icon-2-0" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-0" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Comprehensive security testing to identify and fix vulnerabilities before they're exploited.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 1)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Network Security</span>
+                                        <svg id="icon-2-1" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-1" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Secure your network infrastructure with advanced firewall and monitoring solutions.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 2)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Cloud Security (Azure / AWS)</span>
+                                        <svg id="icon-2-2" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-2" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Protect your cloud infrastructure on Azure and AWS with best-in-class security practices.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 3)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Application Security (Web & Mobile)</span>
+                                        <svg id="icon-2-3" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-3" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Secure your web and mobile applications against common vulnerabilities and attacks.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 4)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>SOC Monitoring</span>
+                                        <svg id="icon-2-4" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-4" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">24/7 Security Operations Center monitoring for real-time threat detection and response.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 5)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Malware Protection & Threat Detection</span>
+                                        <svg id="icon-2-5" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-5" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Advanced malware detection and protection systems to keep your systems safe.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 6)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Security Audits & Compliance (ISO, GDPR)</span>
+                                        <svg id="icon-2-6" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-6" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Comprehensive security audits and compliance assessments for ISO, GDPR, and other standards.</div>
+                                    
+                                    <button onclick="toggleSubService(2, 7)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Endpoint Protection</span>
+                                        <svg id="icon-2-7" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-2-7" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Protect all endpoints including desktops, laptops, and mobile devices from threats.</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h5 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Cyber Security</h5>
-                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Protect your digital assets with advanced security solutions, threat detection, and comprehensive vulnerability assessments.</p>
+                            <div class="relative h-56 sm:h-64 lg:h-[450px] p-5 sm:p-6 lg:p-8 flex items-center justify-center order-1 lg:order-2 group">
+                                <img src="asset/upscalemedia-transformed.png" alt="Cyber Security" class="w-full h-full object-cover rounded-xl sm:rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-5 sm:inset-6 lg:inset-8 bg-gradient-to-l from-blue-50/0 via-transparent to-blue-50/5 rounded-xl sm:rounded-2xl pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Service 4 - AI Automation -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-gray-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <div class="relative h-48 sm:h-56 overflow-hidden">
-                            <img src="asset/image.png" alt="AI Automation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                            <div class="absolute bottom-4 left-4 right-4">
-                                <div class="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-xl flex items-center justify-center shadow-lg mb-3">
-                                    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                    </svg>
+                    <div id="service-3" class="service-card hidden bg-blue-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-blue-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+                        <div class="grid lg:grid-cols-2 gap-0">
+                            <div class="p-10 sm:p-12 lg:p-16 flex flex-col justify-center order-2 lg:order-1">
+                                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">AI Automation</h3>
+                                <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                                    Streamline operations with intelligent automation, machine learning solutions, and AI-powered workflows that boost efficiency.
+                                </p>
+                                <div class="space-y-2">
+                                    <button onclick="toggleSubService(3, 0)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Business Process Automation</span>
+                                        <svg id="icon-3-0" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-0" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Automate repetitive business processes to increase efficiency and reduce manual errors.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 1)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Chatbot Development</span>
+                                        <svg id="icon-3-1" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-1" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Intelligent chatbots that provide 24/7 customer support and automate interactions.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 2)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>AI Customer Support Systems</span>
+                                        <svg id="icon-3-2" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-2" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">AI-powered support systems that handle customer inquiries efficiently and accurately.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 3)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Workflow Automation (n8n, Zapier, Make)</span>
+                                        <svg id="icon-3-3" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-3" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Connect and automate workflows across multiple platforms using n8n, Zapier, or Make.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 4)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Predictive Analytics & Insights</span>
+                                        <svg id="icon-3-4" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-4" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Leverage AI to predict trends, analyze data, and generate actionable business insights.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 5)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Document Processing Automation</span>
+                                        <svg id="icon-3-5" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-5" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Automate document processing, extraction, and classification using AI technology.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 6)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Custom AI Tools / AI Integrations</span>
+                                        <svg id="icon-3-6" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-6" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Build custom AI solutions and integrate AI capabilities into your existing systems.</div>
+                                    
+                                    <button onclick="toggleSubService(3, 7)" class="w-full flex items-center justify-between text-left text-sm sm:text-base font-semibold text-gray-800 hover:text-[#0d4a7a] transition-colors py-2">
+                                        <span>Data Extraction & AI-powered Reporting</span>
+                                        <svg id="icon-3-7" class="w-4 h-4 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    <div id="desc-3-7" class="hidden pl-4 text-xs sm:text-sm text-gray-600 mb-2">Automatically extract data and generate intelligent reports using AI-powered systems.</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h5 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">AI Automation</h5>
-                            <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Streamline operations with intelligent automation, machine learning solutions, and AI-powered workflows that boost efficiency.</p>
+                            <div class="relative h-56 sm:h-64 lg:h-[450px] p-5 sm:p-6 lg:p-8 flex items-center justify-center order-1 lg:order-2 group">
+                                <img src="asset/image.png" alt="AI Automation" class="w-full h-full object-cover rounded-xl sm:rounded-2xl shadow-lg transition-transform duration-500 group-hover:scale-105">
+                                <div class="absolute inset-5 sm:inset-6 lg:inset-8 bg-gradient-to-l from-blue-50/0 via-transparent to-blue-50/5 rounded-xl sm:rounded-2xl pointer-events-none"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+            function showService(index) {
+                // Hide all service cards
+                const cards = document.querySelectorAll('.service-card');
+                cards.forEach(card => {
+                    card.classList.add('hidden');
+                    card.classList.remove('active');
+                });
+                
+                // Show selected service card
+                const selectedCard = document.getElementById(`service-${index}`);
+                if (selectedCard) {
+                    selectedCard.classList.remove('hidden');
+                    selectedCard.classList.add('active');
+                }
+                
+                // Update navigation buttons
+                const buttons = document.querySelectorAll('.service-nav-btn');
+                buttons.forEach((btn, i) => {
+                    if (i === index) {
+                        btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200', 'hover:bg-gray-50', 'hover:border-[#0d4a7a]');
+                        btn.classList.add('bg-gradient-to-r', 'from-[#0d4a7a]', 'to-[#0a3a62]', 'text-white', 'shadow-md');
+                    } else {
+                        btn.classList.remove('bg-gradient-to-r', 'from-[#0d4a7a]', 'to-[#0a3a62]', 'text-white', 'shadow-md');
+                        btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200', 'hover:bg-gray-50', 'hover:border-[#0d4a7a]');
+                    }
+                });
+            }
+
+            function toggleSubService(serviceIndex, subIndex) {
+                const desc = document.getElementById(`desc-${serviceIndex}-${subIndex}`);
+                const icon = document.getElementById(`icon-${serviceIndex}-${subIndex}`);
+                
+                if (desc && icon) {
+                    desc.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                }
+            }
+        </script>
 
         <!-- Why We're the Right Choice -->
         <section id="about" class="py-20 px-4 sm:px-6 lg:px-8">
