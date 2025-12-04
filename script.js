@@ -46,6 +46,33 @@ function updateCarousel() {
     const cards = document.querySelectorAll('.testimonial-card');
     const dots = document.querySelectorAll('.testimonial-dot');
     
+    // Get screen width for responsive spacing
+    const screenWidth = window.innerWidth;
+    let spacing1, spacing2, spacing3, spacing4;
+    
+    // Adjust spacing based on screen size
+    if (screenWidth < 640) { // Mobile
+        spacing1 = 50;
+        spacing2 = 45;
+        spacing3 = 40;
+        spacing4 = 35;
+    } else if (screenWidth < 768) { // Small tablets
+        spacing1 = 55;
+        spacing2 = 50;
+        spacing3 = 45;
+        spacing4 = 40;
+    } else if (screenWidth < 1024) { // Tablets
+        spacing1 = 58;
+        spacing2 = 52;
+        spacing3 = 47;
+        spacing4 = 42;
+    } else { // Desktop
+        spacing1 = 60;
+        spacing2 = 55;
+        spacing3 = 50;
+        spacing4 = 45;
+    }
+    
     cards.forEach((card, index) => {
         // Calculate circular distance for infinite scroll effect
         let diff = index - activeTestimonial;
@@ -63,19 +90,19 @@ function updateCarousel() {
             opacity = 1;
             zIndex = 10;
         } else if (absDiff === 1) {
-            transform = `translateX(${diff * 60}%) scale(0.88)`;
+            transform = `translateX(${diff * spacing1}%) scale(0.88)`;
             opacity = 1;
             zIndex = 8;
         } else if (absDiff === 2) {
-            transform = `translateX(${diff * 55}%) scale(0.76)`;
+            transform = `translateX(${diff * spacing2}%) scale(0.76)`;
             opacity = 1;
             zIndex = 6;
         } else if (absDiff === 3) {
-            transform = `translateX(${diff * 50}%) scale(0.64)`;
+            transform = `translateX(${diff * spacing3}%) scale(0.64)`;
             opacity = 1;
             zIndex = 4;
         } else {
-            transform = `translateX(${diff * 45}%) scale(0.52)`;
+            transform = `translateX(${diff * spacing4}%) scale(0.52)`;
             opacity = 0;
             zIndex = 0;
         }
@@ -141,6 +168,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize
     updateCarousel();
     startAutoScroll();
+
+    // Update on window resize for responsive spacing
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            updateCarousel();
+        }, 150);
+    });
 
     // Pause on hover
     const carouselContainer = document.getElementById('testimonial-carousel');
