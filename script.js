@@ -1,3 +1,61 @@
+// Mobile Menu Toggle
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    
+    if (mobileMenu && menuIcon && closeIcon) {
+        const isOpen = mobileMenu.classList.contains('menu-open');
+        
+        if (isOpen) {
+            mobileMenu.classList.remove('menu-open');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore body scroll
+        } else {
+            mobileMenu.classList.add('menu-open');
+            menuIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent body scroll when menu is open
+        }
+    }
+}
+
+// Close mobile menu when clicking on a link
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+    
+    if (mobileMenu && menuIcon && closeIcon) {
+        mobileMenu.classList.remove('menu-open');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        document.body.style.overflow = '';
+    }
+}
+
+// Initialize mobile menu on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+    }
+    
+    // Close menu when clicking on mobile menu links
+    const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+    
+    // Close menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+            closeMobileMenu();
+        }
+    });
+});
+
 // Service Navigation Functions
 function showService(index) {
     // Hide all service cards
