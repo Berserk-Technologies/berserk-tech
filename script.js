@@ -95,6 +95,20 @@ function toggleSubService(serviceIndex, subIndex) {
     }
 }
 
+function toggleMore(serviceIndex, subIndex) {
+    const moreContent = document.getElementById(`more-${serviceIndex}-${subIndex}`);
+    const btn = document.getElementById(`btn-${serviceIndex}-${subIndex}`);
+    
+    if (moreContent && btn) {
+        moreContent.classList.toggle('hidden');
+        if (moreContent.classList.contains('hidden')) {
+            btn.textContent = 'Know more';
+        } else {
+            btn.textContent = 'Show less';
+        }
+    }
+}
+
 // Testimonial Carousel Functions
 let activeTestimonial = 4;
 const totalTestimonials = 9;

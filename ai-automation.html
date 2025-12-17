@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Automation Services - Berserk Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-blue-50 text-black antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-blue-50/95 backdrop-blur-sm border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-8 sm:h-10 w-auto">
+                    <h5 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">Berserk Technologies</h5>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="index.html#services" class="text-sm font-medium hover:text-gray-600 transition">Services</a>
+                    <a href="index.html#work" class="text-sm font-medium hover:text-gray-600 transition">Work</a>
+                    <a href="index.html#testimonials" class="text-sm font-medium hover:text-gray-600 transition">Testimonials</a>
+                    <a href="index.html#about" class="text-sm font-medium hover:text-gray-600 transition">About</a>
+                    <a href="index.html#blog" class="text-sm font-medium hover:text-gray-600 transition">Blog</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="index.html#contact" class="px-4 lg:px-6 py-2 lg:py-2.5 bg-black text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-16 sm:pt-20">
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-50 to-purple-100">
+            <div class="max-w-7xl mx-auto w-full text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    AI & Automation Services
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-normal leading-relaxed max-w-3xl mx-auto">
+                    Streamline operations with intelligent automation, machine learning solutions, and AI-powered workflows that boost efficiency.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Business Process Automation</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Automate repetitive business processes to increase efficiency and reduce manual errors.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We identify repetitive tasks in your workflow and automate them using RPA, workflow automation tools, and custom scripts. Our automation solutions handle data entry, report generation, email processing, invoice handling, and other routine tasks, freeing your team to focus on strategic work.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Chatbot Development</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Intelligent chatbots that provide 24/7 customer support and automate interactions.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We develop AI-powered chatbots using natural language processing that can handle customer inquiries, provide product information, process orders, schedule appointments, and escalate complex issues to human agents. Our chatbots integrate with your CRM, website, and messaging platforms.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">AI Customer Support Systems</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            AI-powered support systems that handle customer inquiries efficiently and accurately.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our AI support systems use machine learning to understand customer intent, provide instant responses, route tickets intelligently, and learn from interactions to improve over time. They integrate with your knowledge base, ticketing system, and provide analytics on customer satisfaction and common issues.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Workflow Automation (n8n, Zapier, Make)</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Connect and automate workflows across multiple platforms using n8n, Zapier, or Make.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We set up automated workflows that connect your CRM, email, calendar, project management tools, and other business applications. Our automation handles data synchronization, trigger-based actions, multi-step workflows, and error handling. We work with n8n, Zapier, Make, and custom integration solutions.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Predictive Analytics & Insights</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Leverage AI to predict trends, analyze data, and generate actionable business insights.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We use machine learning models to analyze your business data, predict future trends, identify patterns, and generate insights. Our predictive analytics services include sales forecasting, customer behavior prediction, demand forecasting, risk analysis, and recommendation engines to help you make data-driven decisions.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Document Processing Automation</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Automate document processing, extraction, and classification using AI technology.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We implement AI-powered document processing systems that automatically extract data from invoices, contracts, forms, and other documents. Our solutions include OCR, intelligent document classification, data validation, and integration with your business systems. This eliminates manual data entry and reduces errors.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 7 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom AI Tools / AI Integrations</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Build custom AI solutions and integrate AI capabilities into your existing systems.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We develop custom AI models and integrate AI capabilities like natural language processing, computer vision, recommendation systems, and predictive models into your existing software. Our solutions are tailored to your specific business needs and can be integrated with your current infrastructure and workflows.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 8 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Data Extraction & AI-powered Reporting</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Automatically extract data and generate intelligent reports using AI-powered systems.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We build systems that automatically collect data from multiple sources, extract relevant information, analyze patterns, and generate comprehensive reports. Our AI-powered reporting includes automated dashboards, trend analysis, anomaly detection, and personalized insights delivered on schedule or triggered by events.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Automate Your Business?
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                    Let's discuss how our AI & automation services can transform your operations.
+                </p>
+                <a href="index.html#contact" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                    Get Started
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">&copy; 2025 Berserk Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services - Berserk Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-blue-50 text-black antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-blue-50/95 backdrop-blur-sm border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-8 sm:h-10 w-auto">
+                    <h5 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">Berserk Technologies</h5>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="index.html#services" class="text-sm font-medium hover:text-gray-600 transition">Services</a>
+                    <a href="index.html#work" class="text-sm font-medium hover:text-gray-600 transition">Work</a>
+                    <a href="index.html#testimonials" class="text-sm font-medium hover:text-gray-600 transition">Testimonials</a>
+                    <a href="index.html#about" class="text-sm font-medium hover:text-gray-600 transition">About</a>
+                    <a href="index.html#blog" class="text-sm font-medium hover:text-gray-600 transition">Blog</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="index.html#contact" class="px-4 lg:px-6 py-2 lg:py-2.5 bg-black text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-16 sm:pt-20">
+        <section class="relative min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto w-full text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    Web Development Services
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-normal leading-relaxed max-w-3xl mx-auto">
+                    Build stunning, high-performance websites and web applications that drive engagement and deliver exceptional user experiences.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom Website Development</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Professional custom websites tailored to your business needs with modern design and functionality.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We create fully responsive websites using the latest technologies and frameworks. Our development process includes custom design, seamless user experience, mobile optimization, and integration with third-party services. Each website is built with SEO best practices and performance optimization in mind.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Landing Page</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            High-converting landing pages designed to maximize conversions and drive business growth.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our landing pages are crafted with conversion optimization in mind. We use A/B testing, clear call-to-actions, compelling copywriting, fast loading times, and mobile-first design to ensure maximum engagement and conversions for your marketing campaigns.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom Business Software</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Tailored software solutions built specifically for your business processes and requirements.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We analyze your business workflows and develop custom software that fits perfectly into your operations. Our solutions include inventory management systems, workflow automation tools, reporting dashboards, and specialized applications that streamline your unique business processes.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">API Development & Integration</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Seamless API development and integration services to connect your systems and streamline operations.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We design and develop RESTful and GraphQL APIs, integrate third-party services, connect legacy systems with modern applications, and ensure secure data exchange. Our API solutions enable seamless communication between different platforms and services.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">SaaS Product Development</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            End-to-end SaaS product development from concept to deployment and scaling.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            From initial concept to market launch, we handle every aspect of SaaS development. This includes architecture design, multi-tenancy implementation, subscription management, payment integration, user authentication, analytics, and scalable cloud infrastructure setup.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">CRM / ERP Solutions</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Comprehensive CRM and ERP solutions to manage customer relationships and business operations efficiently.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We build and customize CRM systems for sales pipeline management, customer communication tracking, and lead nurturing. Our ERP solutions handle inventory, accounting, HR, supply chain, and reporting - all integrated into a unified platform that gives you complete visibility into your business.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 7 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Cloud-Based Applications</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Scalable cloud-based applications that provide flexibility, accessibility, and cost-effectiveness.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our cloud applications are built on AWS, Azure, or Google Cloud platforms. They offer automatic scaling, high availability, secure data storage, and pay-as-you-go pricing. Users can access these applications from anywhere, on any device, with enterprise-grade security and performance.
+                        </p>
+                    </div>
+
+                    <!-- Service Card 8 -->
+                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Software Maintenance & Optimization</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Ongoing maintenance, updates, and optimization to keep your software running at peak performance.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            We provide continuous support including bug fixes, security patches, feature updates, performance monitoring, database optimization, and regular backups. Our maintenance plans ensure your software stays current, secure, and performs optimally as your business grows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Build Your Next Project?
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                    Let's discuss how our web development services can help transform your vision into reality.
+                </p>
+                <a href="index.html#contact" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                    Get Started
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">&copy; 2025 Berserk Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
