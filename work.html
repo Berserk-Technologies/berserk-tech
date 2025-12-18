@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Berserk Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        #websiteModal {
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* Hide Framer badge by clipping bottom of iframe */
+        #websiteFrame {
+            height: calc(100% + 100px);
+            margin-bottom: -100px;
+        }
+        .modal-iframe-container {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-blue-50 text-black antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-blue-50/95 backdrop-blur-sm border-b border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-8 sm:h-10 w-auto">
+                    <h5 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold">Berserk Technologies</h5>
+                </a>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <div class="relative group">
+                        <a href="index.html#services" class="text-sm font-medium hover:text-gray-600 transition flex items-center gap-1">
+                            Services
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div class="py-2">
+                                <a href="web-development.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <div class="font-semibold">Web Development</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Build stunning websites & apps</div>
+                                </a>
+                                <a href="digital-marketing.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <div class="font-semibold">Digital Marketing</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Boost your online presence</div>
+                                </a>
+                                <a href="cybersecurity.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <div class="font-semibold">Cybersecurity</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Protect your digital assets</div>
+                                </a>
+                                <a href="ai-automation.html" class="block px-4 py-3 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">
+                                    <div class="font-semibold">AI & Automation</div>
+                                    <div class="text-xs text-gray-500 mt-0.5">Streamline your operations</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="work.html" class="text-sm font-medium text-blue-600 transition">Work</a>
+                    <a href="index.html#testimonials" class="text-sm font-medium hover:text-gray-600 transition">Testimonials</a>
+                    <a href="index.html#about" class="text-sm font-medium hover:text-gray-600 transition">About</a>
+                    <a href="index.html#blog" class="text-sm font-medium hover:text-gray-600 transition">Blog</a>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="index.html#contact" class="px-4 lg:px-6 py-2 lg:py-2.5 bg-black text-white rounded-lg text-sm font-semibold hover:bg-gray-800 transition">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="pt-16 sm:pt-20">
+        <section class="relative min-h-[50vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="max-w-7xl mx-auto w-full text-center">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    Our Work
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-normal leading-relaxed max-w-3xl mx-auto">
+                    Explore our portfolio of successful projects across web development, digital marketing, cybersecurity, and AI automation.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Tabs -->
+        <section class="py-8 px-4 sm:px-6 lg:px-8 bg-blue-50 sticky top-16 sm:top-20 z-40 border-b border-blue-200">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <button onclick="filterProjects('all')" class="filter-btn px-4 sm:px-6 py-2 sm:py-3 bg-black text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-gray-800 transition">
+                        All Projects
+                    </button>
+                    <button onclick="filterProjects('web-dev')" class="filter-btn px-4 sm:px-6 py-2 sm:py-3 bg-white text-black border-2 border-black rounded-lg text-sm sm:text-base font-semibold hover:bg-black hover:text-white transition">
+                        Web Development
+                    </button>
+                    <button onclick="filterProjects('marketing')" class="filter-btn px-4 sm:px-6 py-2 sm:py-3 bg-white text-black border-2 border-black rounded-lg text-sm sm:text-base font-semibold hover:bg-black hover:text-white transition">
+                        Digital Marketing
+                    </button>
+                    <button onclick="filterProjects('security')" class="filter-btn px-4 sm:px-6 py-2 sm:py-3 bg-white text-black border-2 border-black rounded-lg text-sm sm:text-base font-semibold hover:bg-black hover:text-white transition">
+                        Cybersecurity
+                    </button>
+                    <button onclick="filterProjects('ai')" class="filter-btn px-4 sm:px-6 py-2 sm:py-3 bg-white text-black border-2 border-black rounded-lg text-sm sm:text-base font-semibold hover:bg-black hover:text-white transition">
+                        AI & Automation
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
+            <div class="max-w-7xl mx-auto">
+                <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project Card 1 - Web Dev -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="web-dev">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://dw1.s81c.com/developer-static-pages/default/en/default_images/tutorial.jpg" alt="E-commerce Platform" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Web Development</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">E-commerce</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Modern E-commerce Platform</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Built a fully responsive e-commerce platform with custom shopping cart, payment integration, and admin dashboard.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 - Marketing -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="marketing">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://dk.cpa/wp-content/uploads/2025/08/Section-3-Marketing-Services-Webpage.png" alt="SEO Campaign" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Digital Marketing</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">SEO</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">SaaS Product Launch Campaign</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Executed comprehensive digital marketing campaign resulting in 300% increase in organic traffic and 150% boost in conversions.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 - Security -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="security">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://images.tely.ai/telyai/cyber-protection-engineer-at-work-ywpliuez.webp" alt="Security Audit" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-red-100 text-red-700 text-xs font-semibold rounded-full">Cybersecurity</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded-full">VAPT</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Enterprise Security Audit</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Conducted comprehensive security assessment and penetration testing for a Fortune 500 company, identifying and fixing critical vulnerabilities.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-red-600 font-semibold hover:text-red-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 - AI -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="ai">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://digitalbusinesstransformation.co.uk/wp-content/uploads/2025/07/dreamina-2025-07-27-1023-A-UK-business-team-collaborating-with-an-1024x576.jpeg" alt="AI Chatbot" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold rounded-full">AI & Automation</span>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-semibold rounded-full">Chatbot</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">AI-Powered Customer Support</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Developed intelligent chatbot system handling 10,000+ customer queries daily with 95% satisfaction rate and 70% cost reduction.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 - Web Dev - Dreelio -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="web-dev">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://dw1.s81c.com/developer-static-pages/default/en/default_images/tutorial.jpg" alt="Dreelio Platform" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                            <div class="absolute top-4 right-4">
+                                <span class="px-3 py-1 bg-green-500 text-white text-xs font-bold rounded-full">Live Site</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Web Development</span>
+                                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs font-semibold rounded-full">SaaS</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Dreelio - Freelance Business Platform</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                All-in-one platform for managing clients, projects, and payments. From first contract to final invoice, trusted by 7,000+ freelancers.
+                            </p>
+                            <button onclick="openModal('https://dreelio.framer.website/')" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
+                                View Live Site
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 - Web Dev -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="web-dev">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://dw1.s81c.com/developer-static-pages/default/en/default_images/tutorial.jpg" alt="SaaS Platform" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">Web Development</span>
+                                <span class="px-3 py-1 bg-cyan-100 text-cyan-700 text-xs font-semibold rounded-full">SaaS</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Cloud-Based Project Management Tool</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Created a scalable SaaS platform for project management with real-time collaboration, serving 5,000+ active users.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 7 - Marketing -->
+                    <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="marketing">
+                        <div class="relative h-64 overflow-hidden">
+                            <img src="https://dk.cpa/wp-content/uploads/2025/08/Section-3-Marketing-Services-Webpage.png" alt="Social Media Campaign" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-3">
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-semibold rounded-full">Digital Marketing</span>
+                                <span class="px-3 py-1 bg-pink-100 text-pink-700 text-xs font-semibold rounded-full">Social Media</span>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-bold mb-2 text-gray-900">Brand Awareness Campaign</h3>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                Launched multi-platform social media campaign achieving 2M+ impressions and 500K+ engagements in 3 months.
+                            </p>
+                            <a href="#" class="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-800 transition">
+                                View Case Study
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Website Preview -->
+        <div id="websiteModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+            <div class="relative w-full h-full max-w-7xl max-h-[90vh] bg-white rounded-xl overflow-hidden">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
+                    <h3 class="text-lg font-semibold text-gray-900">Live Website Preview</h3>
+                    <button onclick="closeModal()" class="p-2 hover:bg-gray-200 rounded-lg transition">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Modal Content -->
+                <div class="modal-iframe-container w-full h-[calc(100%-60px)]">
+                    <iframe id="websiteFrame" src="" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Start Your Project?
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                    Let's work together to bring your vision to life and achieve exceptional results.
+                </p>
+                <a href="index.html#contact" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">&copy; 2025 Berserk Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Filter & Modal Script -->
+    <script>
+        function filterProjects(category) {
+            const projects = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-black', 'text-white');
+                btn.classList.add('bg-white', 'text-black', 'border-2', 'border-black');
+            });
+            event.target.classList.remove('bg-white', 'text-black', 'border-2', 'border-black');
+            event.target.classList.add('bg-black', 'text-white');
+            
+            // Filter projects
+            projects.forEach(project => {
+                if (category === 'all' || project.dataset.category === category) {
+                    project.style.display = 'block';
+                    setTimeout(() => {
+                        project.style.opacity = '1';
+                        project.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    project.style.opacity = '0';
+                    project.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        project.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Modal Functions
+        function openModal(url) {
+            const modal = document.getElementById('websiteModal');
+            const iframe = document.getElementById('websiteFrame');
+            
+            iframe.src = url;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('websiteModal');
+            const iframe = document.getElementById('websiteFrame');
+            
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('websiteModal')?.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
