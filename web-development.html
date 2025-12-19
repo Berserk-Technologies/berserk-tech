@@ -37,10 +37,10 @@
         .demo-image { transition: transform 0.35s ease; }
         .demo-card:hover .demo-image { transform: scale(1.06); }
         .touch-manipulation { touch-action: manipulation; }
-        /* Hide Framer badge, Buy Template, Use Template, Use for Free, Another AI Template, Get this $29, Get 50% OFF All Access, Get Template, Edit Template, Made in Framer by clipping bottom of iframe */
+        /* Hide Framer badge, Buy Template, Use Template, Use for Free, Another AI Template, Get this $29, Get 50% OFF All Access, Get Template, Edit Template, Made in Framer, Envato Market, Buy Now by clipping bottom of iframe */
         #websiteFrame {
-            height: calc(100% + 400px);
-            margin-bottom: -400px;
+            height: calc(100% + 500px);
+            margin-bottom: -500px;
             transition: width 0.3s ease;
         }
         .modal-iframe-container {
@@ -550,51 +550,50 @@
                             <div class="flex items-center justify-center mb-3">
                                 <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
                             </div>
-                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Operations dashboard example">
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth examples-container" data-scroller data-service="3">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80" alt="E-commerce Dashboard">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Ops Dashboard</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">KPIs, tasks, and approvals.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">E-commerce Dashboard</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Complete e-commerce management system.</p>
+                                        <button onclick="openModal('https://gxon.layoutdrop.com/demo/ecommerce/ecommerce.html')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Workflow automation example">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=800&q=80" alt="Calendar Management">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Workflow Automation</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Triggers, rules, and routing.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Calendar Management</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Event scheduling and calendar system.</p>
+                                        <button onclick="openModal('https://gxon.layoutdrop.com/demo/calendar.html')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1560472355-536de3962603?w=900&q=80" alt="Inventory system example">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80" alt="Admin Dashboard">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Inventory System</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Stock, SKUs, and alerts.</p>
-                                    </div>
-                                </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&q=80" alt="Reporting portal example">
-                                    </div>
-                                    <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Reporting Portal</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Exports, filters, insights.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Admin Dashboard</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Comprehensive admin panel solution.</p>
+                                        <button onclick="openModal('https://gxon.layoutdrop.com/php/demo/index.php')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
-                            <div class="flex items-center gap-1.5 sm:gap-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2 navigation-buttons" data-service="3">
                                 <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
                                     <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -606,9 +605,9 @@
                                     </svg>
                                 </button>
                             </div>
-                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                            <button onclick="toggleExpandAll('3')" class="view-all-btn inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" data-service="3">
                                 View all
-                            </a>
+                            </button>
                         </div>
                     </article>
 
