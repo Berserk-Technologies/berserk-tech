@@ -37,6 +37,117 @@
         .demo-image { transition: transform 0.35s ease; }
         .demo-card:hover .demo-image { transform: scale(1.06); }
         .touch-manipulation { touch-action: manipulation; }
+        /* Hide Framer badge, Buy Template, Use Template, Use for Free, Another AI Template, Get this $29, Get 50% OFF All Access, Get Template, Edit Template, Made in Framer by clipping bottom of iframe */
+        #websiteFrame {
+            height: calc(100% + 400px);
+            margin-bottom: -400px;
+            transition: width 0.3s ease;
+        }
+        .modal-iframe-container {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: #f3f4f6;
+            position: relative;
+        }
+        /* Blur overlay for logo area only in modal */
+        .modal-iframe-container::before {
+            content: 'Your Logo';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 65px;
+            background: linear-gradient(to bottom right, rgba(243, 244, 246, 0.98), rgba(243, 244, 246, 0.85), rgba(243, 244, 246, 0.5), transparent);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 10;
+            pointer-events: none;
+            border-radius: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: #1f2937;
+            padding: 0 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (min-width: 640px) {
+            .modal-iframe-container::before {
+                width: 220px;
+                height: 75px;
+                font-size: 15px;
+                padding: 0 16px;
+                border-radius: 0 0 12px 0;
+            }
+        }
+        @media (min-width: 1024px) {
+            .modal-iframe-container::before {
+                width: 260px;
+                height: 80px;
+                font-size: 16px;
+                padding: 0 20px;
+                border-radius: 0 0 14px 0;
+                background: linear-gradient(to bottom right, rgba(243, 244, 246, 0.99), rgba(243, 244, 246, 0.95), rgba(243, 244, 246, 0.7), transparent);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+            }
+        }
+        @media (min-width: 1280px) {
+            .modal-iframe-container::before {
+                width: 280px;
+                height: 85px;
+                font-size: 17px;
+                padding: 0 22px;
+            }
+        }
+        .view-desktop #websiteFrame {
+            width: 100%;
+        }
+        .view-tablet #websiteFrame {
+            width: 768px;
+            max-width: 100%;
+        }
+        .view-mobile #websiteFrame {
+            width: 375px;
+            max-width: 100%;
+        }
+        .view-toggle-btn.active {
+            background: white;
+            color: #1f2937;
+        }
+        .view-toggle-btn.active svg {
+            color: #2563eb;
+        }
+        /* Expanded grid view for examples */
+        .examples-container.expanded {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+            overflow: visible;
+            padding-bottom: 0;
+        }
+        .examples-container.expanded .demo-card {
+            min-width: 100%;
+            width: 100%;
+        }
+        @media (min-width: 640px) {
+            .examples-container.expanded {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.25rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .examples-container.expanded {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+        .examples-container.expanded ~ .pt-4 .navigation-buttons {
+            display: none;
+        }
     </style>
 </head>
 <body class="smooth-scroll bg-blue-50 text-black antialiased">
@@ -197,51 +308,76 @@
                             <div class="flex items-center justify-center mb-3">
                                 <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
                             </div>
-                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
-                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="Marketing website example">
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth examples-container" data-scroller data-service="1">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80" alt="Digital agency portfolio website">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Marketing Website</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Clean hero + conversion sections.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Digital Agency Portfolio</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Modern design with clean layouts.</p>
+                                        <button onclick="openModal('https://qix-studio.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
-                                </a>
-                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Business dashboard website example">
-                                    </div>
-                                    <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Business Dashboard</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Data-first layouts & charts.</p>
-                                    </div>
-                                </a>
-                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80" alt="Agency website example">
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=800&q=80" alt="Creative agency showcase website">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Agency Website</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Case studies & service blocks.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Creative Agency Showcase</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Bold visuals and engaging content.</p>
+                                        <button onclick="openModal('https://themesbrand.com/velzon/html/creative/index.html')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
-                                </a>
-                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=900&q=80" alt="Product website example">
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Modern agency website">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Product Website</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Features, pricing, and FAQs.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Modern Agency Design</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Professional and contemporary style.</p>
+                                        <button onclick="openModal('https://agencybox.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
-                                </a>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" alt="Product showcase website">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Product Showcase</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">E-commerce and product display.</p>
+                                        <button onclick="openModal('https://produck.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80" alt="Social media agency website">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Social Media Agency</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Content strategy and growth platform.</p>
+                                        <button onclick="openModal('https://viral-sma.framer.website/?via=hxmzaehsan&utm_source=framer')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
-                            <div class="flex items-center gap-1.5 sm:gap-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2 navigation-buttons" data-service="1">
                                 <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
                                     <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -253,9 +389,9 @@
                                     </svg>
                                 </button>
                             </div>
-                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                            <button onclick="toggleExpandAll('1')" class="view-all-btn inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" data-service="1">
                                 View all
-                            </a>
+                            </button>
                         </div>
                     </article>
 
@@ -280,51 +416,102 @@
                             <div class="flex items-center justify-center mb-3">
                                 <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
                             </div>
-                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=900&q=80" alt="SaaS landing example">
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth examples-container" data-scroller data-service="2">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data Extraction Platform">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">SaaS Launch Page</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Bold headline + proof + CTA.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Data Extraction Platform</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">AI-powered data extraction solution.</p>
+                                        <button onclick="openModal('https://xtract.framer.ai/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80" alt="Event landing example">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80" alt="AI Automation Agency">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Event Registration</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Schedule + speakers + signup.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">AI Automation Agency</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Next-gen AI solutions for business growth.</p>
+                                        <button onclick="openModal('https://etery.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&q=80" alt="Lead gen landing example">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Education Platform">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Lead Gen Page</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Form-first with clear benefits.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Education Platform</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Modern learning management system.</p>
+                                        <button onclick="openModal('https://edufy.framer.website/?via=framerdevs')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
-                                    <div class="relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
-                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=80" alt="Product waitlist landing example">
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Creative Agency">
                                     </div>
                                     <div class="p-3 sm:p-4">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Waitlist Page</p>
-                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Simple CTA + social proof.</p>
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Creative Agency</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Bold design and creative solutions.</p>
+                                        <button onclick="openModal('https://altero.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Presentation Platform">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Presentation Platform</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Create stunning presentations.</p>
+                                        <button onclick="openModal('https://keynote.framer.website/?via=kuipermarc&utm_source=framer')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80" alt="Service Marketplace">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Service Marketplace</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Connect with service providers.</p>
+                                        <button onclick="openModal('https://servicex.framer.website/')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition text-left w-full">
+                                    <div class="relative h-40 sm:h-44 lg:h-48 overflow-hidden">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10 pointer-events-none"></div>
+                                        <img class="demo-image w-full h-full object-cover" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80" alt="Connection Platform">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Connection Platform</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Pricing and subscription plans.</p>
+                                        <button onclick="openModal('https://dayconn.framer.website/pricing')" class="mt-2 text-xs sm:text-sm text-blue-600 font-semibold hover:text-blue-800 transition">
+                                            View the site →
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
-                            <div class="flex items-center gap-1.5 sm:gap-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2 navigation-buttons" data-service="2">
                                 <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
                                     <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -336,9 +523,9 @@
                                     </svg>
                                 </button>
                             </div>
-                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                            <button onclick="toggleExpandAll('2')" class="view-all-btn inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" data-service="2">
                                 View all
-                            </a>
+                            </button>
                         </div>
                     </article>
 
@@ -857,6 +1044,25 @@
                 </a>
             </div>
         </section>
+
+        <!-- Modal for Website Preview -->
+        <div id="websiteModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-2 sm:p-4 lg:p-6">
+            <div class="relative w-full h-full max-w-[95vw] sm:max-w-[90vw] lg:max-w-[95vw] xl:max-w-[98vw] max-h-[98vh] sm:max-h-[95vh] lg:max-h-[98vh] bg-white rounded-lg sm:rounded-xl overflow-hidden view-desktop">
+                <!-- Modal Header -->
+                <div class="flex items-center justify-between p-3 sm:p-4 border-b border-gray-200 bg-gray-50">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900">Live Website Preview</h3>
+                    <button onclick="closeModal()" class="p-1.5 sm:p-2 hover:bg-gray-200 rounded-lg transition">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Modal Content -->
+                <div class="modal-iframe-container w-full h-[calc(100%-56px)] sm:h-[calc(100%-60px)]">
+                    <iframe id="websiteFrame" src="" class="h-full w-full" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -931,6 +1137,80 @@
                 });
             });
         });
+
+        // Modal Functions
+        function openModal(url) {
+            const modal = document.getElementById('websiteModal');
+            const iframe = document.getElementById('websiteFrame');
+            
+            iframe.src = url;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            // Reset to desktop view when opening
+            setView('desktop');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('websiteModal');
+            const iframe = document.getElementById('websiteFrame');
+            
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            iframe.src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        function setView(view) {
+            const modal = document.getElementById('websiteModal');
+            const buttons = document.querySelectorAll('.view-toggle-btn');
+            
+            // Remove all view classes
+            modal.classList.remove('view-desktop', 'view-tablet', 'view-mobile');
+            // Add selected view class
+            modal.classList.add('view-' + view);
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('view-' + view + '-btn').classList.add('active');
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('websiteModal')?.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Toggle expand all examples
+        function toggleExpandAll(serviceId) {
+            const container = document.querySelector(`[data-service="${serviceId}"].examples-container`);
+            const navButtons = document.querySelector(`[data-service="${serviceId}"].navigation-buttons`);
+            const viewAllBtn = document.querySelector(`[data-service="${serviceId}"].view-all-btn`);
+            
+            if (container && viewAllBtn) {
+                if (container.classList.contains('expanded')) {
+                    // Collapse
+                    container.classList.remove('expanded');
+                    viewAllBtn.textContent = 'View all';
+                    if (navButtons) navButtons.style.display = 'flex';
+                } else {
+                    // Expand
+                    container.classList.add('expanded');
+                    viewAllBtn.textContent = 'Show less';
+                    if (navButtons) navButtons.style.display = 'none';
+                }
+            }
+        }
     </script>
 </body>
 </html>
