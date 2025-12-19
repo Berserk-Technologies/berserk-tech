@@ -29,6 +29,14 @@
             overflow-x: hidden;
             max-width: 100vw;
         }
+        /* horizontal examples scroller */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        .snap-x { scroll-snap-type: x mandatory; }
+        .snap-start { scroll-snap-align: start; }
+        .demo-image { transition: transform 0.35s ease; }
+        .demo-card:hover .demo-image { transform: scale(1.06); }
+        .touch-manipulation { touch-action: manipulation; }
     </style>
 </head>
 <body class="smooth-scroll bg-blue-50 text-black antialiased">
@@ -78,122 +86,773 @@
 
     <!-- Hero Section -->
     <main class="pt-16 sm:pt-20">
-        <section class="relative min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-blue-50 to-blue-100">
-            <div class="max-w-7xl mx-auto w-full text-center">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                    Web Development Services
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-normal leading-relaxed max-w-3xl mx-auto">
-                    Build stunning, high-performance websites and web applications that drive engagement and deliver exceptional user experiences.
-                </p>
+        <section class="relative overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100 to-white">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -top-24 -right-24 w-72 h-72 sm:w-96 sm:h-96 bg-blue-400/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 sm:w-96 sm:h-96 bg-purple-400/20 blur-3xl rounded-full"></div>
             </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom Website Development</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Professional custom websites tailored to your business needs with modern design and functionality.
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-100 text-sm font-semibold text-gray-800 shadow-sm">
+                            <span class="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600"></span>
+                            Web Development
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-gray-900">
+                            Web Development Services
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
+                            Build stunning, high-performance websites and web applications that drive engagement and deliver exceptional user experiences.
                         </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We create fully responsive websites using the latest technologies and frameworks. Our development process includes custom design, seamless user experience, mobile optimization, and integration with third-party services. Each website is built with SEO best practices and performance optimization in mind.
-                        </p>
+                        <div class="grid sm:grid-cols-2 gap-3 pt-1">
+                            <div class="flex items-center gap-3 rounded-xl bg-white/70 border border-blue-100 p-4">
+                                <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-blue-600 text-white">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="font-semibold text-gray-900">Modern, responsive UI</p>
+                                    <p class="text-sm text-gray-600">Fast, clean layouts that look great everywhere.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 rounded-xl bg-white/70 border border-blue-100 p-4">
+                                <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-purple-600 text-white">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="font-semibold text-gray-900">Performance-first</p>
+                                    <p class="text-sm text-gray-600">Optimized for speed, SEO, and conversion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <a href="index.html#contact" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-xl text-sm sm:text-base font-semibold hover:bg-gray-800 active:bg-gray-900 transition touch-manipulation">
+                                Start a project
+                            </a>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-gray-900 rounded-xl text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                See our work
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Landing Page</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            High-converting landing pages designed to maximize conversions and drive business growth.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Our landing pages are crafted with conversion optimization in mind. We use A/B testing, clear call-to-actions, compelling copywriting, fast loading times, and mobile-first design to ensure maximum engagement and conversions for your marketing campaigns.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom Business Software</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Tailored software solutions built specifically for your business processes and requirements.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We analyze your business workflows and develop custom software that fits perfectly into your operations. Our solutions include inventory management systems, workflow automation tools, reporting dashboards, and specialized applications that streamline your unique business processes.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">API Development & Integration</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Seamless API development and integration services to connect your systems and streamline operations.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We design and develop RESTful and GraphQL APIs, integrate third-party services, connect legacy systems with modern applications, and ensure secure data exchange. Our API solutions enable seamless communication between different platforms and services.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 5 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">SaaS Product Development</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            End-to-end SaaS product development from concept to deployment and scaling.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            From initial concept to market launch, we handle every aspect of SaaS development. This includes architecture design, multi-tenancy implementation, subscription management, payment integration, user authentication, analytics, and scalable cloud infrastructure setup.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 6 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">CRM / ERP Solutions</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Comprehensive CRM and ERP solutions to manage customer relationships and business operations efficiently.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We build and customize CRM systems for sales pipeline management, customer communication tracking, and lead nurturing. Our ERP solutions handle inventory, accounting, HR, supply chain, and reporting - all integrated into a unified platform that gives you complete visibility into your business.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 7 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Cloud-Based Applications</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Scalable cloud-based applications that provide flexibility, accessibility, and cost-effectiveness.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Our cloud applications are built on AWS, Azure, or Google Cloud platforms. They offer automatic scaling, high availability, secure data storage, and pay-as-you-go pricing. Users can access these applications from anywhere, on any device, with enterprise-grade security and performance.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 8 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Software Maintenance & Optimization</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Ongoing maintenance, updates, and optimization to keep your software running at peak performance.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We provide continuous support including bug fixes, security patches, feature updates, performance monitoring, database optimization, and regular backups. Our maintenance plans ensure your software stays current, secure, and performs optimally as your business grows.
-                        </p>
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-[0_30px_70px_-30px_rgba(0,0,0,0.45)] border border-blue-100 bg-white">
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/20 to-transparent z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80" alt="Web development hero visual" class="w-full h-[260px] sm:h-[340px] lg:h-[420px] object-cover">
+                        </div>
+                        <div class="mt-4 grid grid-cols-3 gap-3">
+                            <div class="rounded-xl bg-white/80 border border-blue-100 p-3 text-center shadow-sm">
+                                <p class="text-xs text-gray-500">Delivery</p>
+                                <p class="text-sm sm:text-base font-bold text-gray-900">Fast & Clean</p>
+                            </div>
+                            <div class="rounded-xl bg-white/80 border border-blue-100 p-3 text-center shadow-sm">
+                                <p class="text-xs text-gray-500">Quality</p>
+                                <p class="text-sm sm:text-base font-bold text-gray-900">Production-ready</p>
+                            </div>
+                            <div class="rounded-xl bg-white/80 border border-blue-100 p-3 text-center shadow-sm">
+                                <p class="text-xs text-gray-500">Support</p>
+                                <p class="text-sm sm:text-base font-bold text-gray-900">Long-term</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Services (one-by-one with scrollable examples) -->
+        <section class="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8 sm:mb-10">
+                    <div>
+                        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900">Services</h2>
+                        <p class="text-sm sm:text-base text-gray-600 mt-2">Explore each service with real-style examples you can scroll left and right.</p>
+                    </div>
+                    <div class="text-xs sm:text-sm text-gray-500 hidden sm:block">
+                        Tip: scroll horizontally on the examples strip →
+                    </div>
+                </div>
+
+                <div class="space-y-8 sm:space-y-12 lg:space-y-16">
+                    <!-- Service 1 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center lg:text-center mx-auto w-full">
+                                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    1
+                                </div>
+                                <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">Custom Website Development</h3>
+                                <p class="text-sm sm:text-base text-gray-700 mt-3 leading-relaxed">
+                                    Professional custom websites tailored to your business needs with modern design and functionality.
+                                </p>
+                                <p class="text-sm sm:text-base text-gray-700 mt-3 leading-relaxed">
+                                    We create fully responsive websites using the latest technologies and frameworks. Our development process includes custom design, seamless user experience, mobile optimization, and integration with third-party services. Each website is built with SEO best practices and performance optimization in mind.
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="Marketing website example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Marketing Website</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Clean hero + conversion sections.</p>
+                                    </div>
+                                </a>
+                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Business dashboard website example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Business Dashboard</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Data-first layouts & charts.</p>
+                                    </div>
+                                </a>
+                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80" alt="Agency website example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Agency Website</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Case studies & service blocks.</p>
+                                    </div>
+                                </a>
+                                <a class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition" href="work.html">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?w=900&q=80" alt="Product website example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Product Website</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Features, pricing, and FAQs.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    2
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">Landing Page</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                High-converting landing pages designed to maximize conversions and drive business growth.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Our landing pages are crafted with conversion optimization in mind. We use A/B testing, clear call-to-actions, compelling copywriting, fast loading times, and mobile-first design to ensure maximum engagement and conversions for your marketing campaigns.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=900&q=80" alt="SaaS landing example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">SaaS Launch Page</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Bold headline + proof + CTA.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80" alt="Event landing example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Event Registration</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Schedule + speakers + signup.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&q=80" alt="Lead gen landing example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Lead Gen Page</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Form-first with clear benefits.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=80" alt="Product waitlist landing example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Waitlist Page</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Simple CTA + social proof.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    3
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">Custom Business Software</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Tailored software solutions built specifically for your business processes and requirements.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                We analyze your business workflows and develop custom software that fits perfectly into your operations. Our solutions include inventory management systems, workflow automation tools, reporting dashboards, and specialized applications that streamline your unique business processes.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Operations dashboard example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Ops Dashboard</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">KPIs, tasks, and approvals.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Workflow automation example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Workflow Automation</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Triggers, rules, and routing.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1560472355-536de3962603?w=900&q=80" alt="Inventory system example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Inventory System</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Stock, SKUs, and alerts.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&q=80" alt="Reporting portal example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Reporting Portal</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Exports, filters, insights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    4
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">API Development & Integration</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Seamless API development and integration services to connect your systems and streamline operations.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                We design and develop RESTful and GraphQL APIs, integrate third-party services, connect legacy systems with modern applications, and ensure secure data exchange. Our API solutions enable seamless communication between different platforms and services.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=900&q=80" alt="REST API example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">REST API</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Endpoints, auth, rate limits.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Integration example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">3rd‑Party Integration</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Payments, CRM, email tools.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Security example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Secure Data Exchange</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">JWT/OAuth, encryption, logging.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="GraphQL example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">GraphQL</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Flexible queries & schema design.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    5
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">SaaS Product Development</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                End-to-end SaaS product development from concept to deployment and scaling.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                From initial concept to market launch, we handle every aspect of SaaS development. This includes architecture design, multi-tenancy implementation, subscription management, payment integration, user authentication, analytics, and scalable cloud infrastructure setup.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&q=80" alt="SaaS product example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Multi‑tenant App</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Workspaces, roles, billing.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80" alt="SaaS team example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Admin Console</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Users, plans, analytics.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80" alt="Subscription example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Subscriptions</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Trials, upgrades, invoices.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Analytics example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Product Analytics</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Funnels, cohorts, events.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    6
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">CRM / ERP Solutions</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Comprehensive CRM and ERP solutions to manage customer relationships and business operations efficiently.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                We build and customize CRM systems for sales pipeline management, customer communication tracking, and lead nurturing. Our ERP solutions handle inventory, accounting, HR, supply chain, and reporting - all integrated into a unified platform that gives you complete visibility into your business.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80" alt="CRM example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Sales CRM</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Leads, deals, pipelines.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=900&q=80" alt="ERP example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">ERP Operations</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Orders, inventory, finance.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80" alt="Customer support example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Customer Hub</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Tickets, notes, comms.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Reporting example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Reporting</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Dashboards and exports.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 7 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    7
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">Cloud-Based Applications</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Scalable cloud-based applications that provide flexibility, accessibility, and cost-effectiveness.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Our cloud applications are built on AWS, Azure, or Google Cloud platforms. They offer automatic scaling, high availability, secure data storage, and pay-as-you-go pricing. Users can access these applications from anywhere, on any device, with enterprise-grade security and performance.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900&q=80" alt="Cloud app example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Cloud Portal</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Auth, roles, and settings.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Security cloud example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Secure Storage</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Policies, encryption, backups.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Scalability example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Auto‑Scaling</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Load, queues, observability.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80" alt="Monitoring example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Monitoring</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Alerts, logs, performance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Service 8 -->
+                    <article class="rounded-2xl border border-blue-100 bg-blue-50/40 p-4 sm:p-6 lg:p-8">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6">
+                            <div class="max-w-4xl text-center mx-auto w-full">
+                            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-blue-100 text-xs sm:text-sm font-semibold text-gray-800">
+                                    8
+                            </div>
+                            <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold mt-3 text-gray-900">Software Maintenance & Optimization</h3>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                Ongoing maintenance, updates, and optimization to keep your software running at peak performance.
+                            </p>
+                            <p class="text-gray-700 mt-3 leading-relaxed">
+                                We provide continuous support including bug fixes, security patches, feature updates, performance monitoring, database optimization, and regular backups. Our maintenance plans ensure your software stays current, secure, and performs optimally as your business grows.
+                            </p>
+                            </div>
+                            
+                        </div>
+                        <div class="mt-4 sm:mt-6">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-xs sm:text-sm font-semibold text-gray-900">Examples</p>
+                            </div>
+                            <div class="scroller flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-hide snap-x scroll-smooth" data-scroller>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80" alt="Performance optimization example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Performance Tune‑Up</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Core Web Vitals improvements.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Security patches example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Security Patches</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Updates, hardening, monitoring.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Database optimization example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Database Optimization</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Queries, indexes, caching.</p>
+                                    </div>
+                                </div>
+                                <div class="demo-card snap-start min-w-[240px] sm:min-w-[280px] lg:min-w-[320px] rounded-xl sm:rounded-2xl bg-white border border-blue-100 overflow-hidden shadow-sm hover:shadow-lg transition">
+                                    <div class="relative">
+                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/35 via-purple-900/15 to-transparent z-10"></div>
+                                        <img class="demo-image w-full h-40 sm:h-44 lg:h-48 object-cover" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="Uptime monitoring example">
+                                    </div>
+                                    <div class="p-3 sm:p-4">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-900">Uptime Monitoring</p>
+                                        <p class="text-xs sm:text-sm text-gray-600 mt-1">Alerts, SLAs, incident response.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 sm:pt-6 flex justify-end items-center gap-2 sm:gap-3">
+                            <div class="flex items-center gap-1.5 sm:gap-2">
+                                <button type="button" class="scroller-prev inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples left">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                    </svg>
+                                </button>
+                                <button type="button" class="scroller-next inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation" aria-label="Scroll examples right">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl bg-white text-gray-900 text-sm sm:text-base font-semibold border border-blue-100 hover:bg-blue-50 active:bg-blue-100 transition touch-manipulation">
+                                View all
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
-        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                     Ready to Build Your Next Project?
                 </h2>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
                     Let's discuss how our web development services can help transform your vision into reality.
                 </p>
-                <a href="index.html#contact" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                <a href="index.html#contact" class="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-200 active:bg-gray-300 transition touch-manipulation">
                     Get Started
                 </a>
             </div>
@@ -201,14 +860,77 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 px-4">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-400">&copy; 2025 Berserk Technologies. All rights reserved.</p>
+    <footer class="bg-gray-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-10 w-auto bg-white/10 rounded-lg p-1.5">
+                        <div>
+                            <p class="font-extrabold text-lg">Berserk Technologies</p>
+                            <p class="text-sm text-gray-400">Web • Security • AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mt-4 leading-relaxed">
+                        We build modern web solutions that look great, load fast, and scale with your business.
+                    </p>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Company</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a class="hover:text-white transition" href="index.html#about">About</a></li>
+                        <li><a class="hover:text-white transition" href="index.html#testimonials">Testimonials</a></li>
+                        <li><a class="hover:text-white transition" href="index.html#blog">Blog</a></li>
+                        <li><a class="hover:text-white transition" href="work.html">Work</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Services</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a class="hover:text-white transition" href="web-development.html">Web Development</a></li>
+                        <li><a class="hover:text-white transition" href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a class="hover:text-white transition" href="cybersecurity.html">Cybersecurity</a></li>
+                        <li><a class="hover:text-white transition" href="ai-automation.html">AI & Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Get in touch</p>
+                    <p class="text-gray-300 leading-relaxed">Want to build something? Tell us what you need and we’ll reply quickly.</p>
+                    <a href="index.html#contact" class="inline-flex items-center justify-center mt-4 px-5 py-3 rounded-xl bg-white text-gray-900 font-semibold hover:bg-gray-200 active:bg-gray-300 transition touch-manipulation w-full sm:w-auto">
+                        Contact us
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-gray-400 text-sm">&copy; 2025 Berserk Technologies. All rights reserved.</p>
+                <div class="flex items-center gap-4 text-sm text-gray-400">
+                    <a class="hover:text-white transition" href="index.html#contact">Privacy</a>
+                    <a class="hover:text-white transition" href="index.html#contact">Terms</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Horizontal scrollers: left/right buttons
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollers = document.querySelectorAll('[data-scroller]');
+            scrollers.forEach((scroller) => {
+                const root = scroller.closest('article') || scroller.parentElement;
+                const prev = root ? root.querySelector('.scroller-prev') : null;
+                const next = root ? root.querySelector('.scroller-next') : null;
+
+                const step = () => Math.max(280, Math.floor(scroller.clientWidth * 0.85));
+
+                prev?.addEventListener('click', () => {
+                    scroller.scrollBy({ left: -step(), behavior: 'smooth' });
+                });
+                next?.addEventListener('click', () => {
+                    scroller.scrollBy({ left: step(), behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
