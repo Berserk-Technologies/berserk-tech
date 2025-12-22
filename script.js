@@ -262,3 +262,75 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Video Scroll-to-Play Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceVideos = [
+        document.getElementById('video-service-0'),
+        document.getElementById('video-service-1'),
+        document.getElementById('video-service-2'),
+        document.getElementById('video-service-3')
+    ];
+
+    // Filter out null videos (in case some don't exist)
+    const videos = serviceVideos.filter(video => video !== null);
+
+    if (videos.length === 0) return;
+
+    // Create Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Play when 50% of video is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                // Video is in view, play it
+                video.play().catch(error => {
+                    // Handle autoplay restrictions
+                    console.log('Video autoplay prevented:', error);
+                });
+            } else {
+                // Video is out of view, pause it
+                video.pause();
+            }
+        });
+    }, observerOptions);
+
+    // Observe all service videos
+    videos.forEach(video => {
+        observer.observe(video);
+    });
+
+    // Also handle service switching - play video when service becomes active
+    function handleServiceSwitch() {
+        const activeServiceCard = document.querySelector('.service-card.active');
+        if (activeServiceCard) {
+            const videoId = activeServiceCard.id.replace('service-', 'video-service-');
+            const video = document.getElementById(videoId);
+            if (video) {
+                // Check if video is in viewport
+                const rect = video.getBoundingClientRect();
+                const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+                if (isInView) {
+                    video.play().catch(error => {
+                        console.log('Video autoplay prevented:', error);
+                    });
+                }
+            }
+        }
+    }
+
+    // Override showService to also handle video playback
+    const originalShowService = window.showService;
+    if (originalShowService) {
+        window.showService = function(index) {
+            originalShowService(index);
+            // Small delay to ensure DOM is updated
+            setTimeout(handleServiceSwitch, 100);
+        };
+    }
+});
+
