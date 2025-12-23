@@ -334,3 +334,117 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Number Animation for Stats Section
+document.addEventListener('DOMContentLoaded', function() {
+    const animateNumber = (element) => {
+        const target = parseFloat(element.getAttribute('data-animate-number'));
+        const suffix = element.getAttribute('data-suffix') || '';
+        const prefix = element.getAttribute('data-prefix') || '';
+        const duration = 2000; // 2 seconds
+        const startTime = performance.now();
+        const startValue = 0;
+        
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentValue = Math.floor(startValue + (target - startValue) * easeOutQuart);
+            
+            // Format the number
+            let displayValue = currentValue.toString();
+            if (prefix) displayValue = prefix + displayValue;
+            if (suffix) displayValue = displayValue + suffix;
+            
+            element.textContent = displayValue;
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                // Ensure final value is set
+                let finalValue = target.toString();
+                if (prefix) finalValue = prefix + finalValue;
+                if (suffix) finalValue = finalValue + suffix;
+                element.textContent = finalValue;
+            }
+        };
+        
+        requestAnimationFrame(animate);
+    };
+    
+    // Use Intersection Observer to trigger animation when stats section comes into view
+    const statsSection = document.getElementById('stats-section');
+    const numberElements = document.querySelectorAll('[data-animate-number]');
+    
+    if (statsSection && numberElements.length > 0) {
+        const triggerAnimation = () => {
+            numberElements.forEach(element => {
+                if (!element.classList.contains('animated')) {
+                    element.classList.add('animated');
+                    animateNumber(element);
+                }
+            });
+        };
+        
+        // Check if section is already visible on page load
+        const rect = statsSection.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isVisible) {
+            // Section is already visible, trigger animation immediately
+            triggerAnimation();
+        } else {
+            // Use Intersection Observer for when section comes into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        triggerAnimation();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1, // Trigger when 10% of the section is visible
+                rootMargin: '0px 0px -50px 0px' // Trigger slightly before fully in view
+            });
+            
+            observer.observe(statsSection);
+        }
+    }
+});
+
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        
+        question.addEventListener('click', () => {
+            // Check if this item is currently open
+            const isOpen = !answer.classList.contains('hidden');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherIcon = otherItem.querySelector('.faq-icon');
+                if (otherItem !== item) {
+                    otherAnswer.classList.add('hidden');
+                    otherIcon.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle current item
+            if (isOpen) {
+                answer.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+});
+

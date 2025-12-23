@@ -25,7 +25,8 @@
             font-family: 'Inter', sans-serif;
         }
         .bonheur-royale {
-            font-family: 'Bonheur Royale', cursive;
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
         }
         .gradient-text {
             background: linear-gradient(90deg, #000 0%, #333 100%);
@@ -191,60 +192,60 @@
                         </div>
                     </div>
                     <div class="relative order-2 lg:order-2 mb-8 lg:mb-0">
-                        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
-                            <img src="asset/video_thamblen.jpg" alt="Hero" class="w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_80px_-12px_rgba(0,0,0,0.4)] group">
+                            <img src="asset/hero image.png" alt="Hero" class="w-full h-[350px] sm:h-[450px] md:h-[480px] lg:h-[520px] object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                             
-                            <!-- Center Play Button -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <button class="group/play relative">
-                                    <div class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-2xl transform group-hover/play:scale-110 transition-all duration-300">
-                                        <svg class="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-black ml-1" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"></path>
+                            <!-- Top Left Stats Badge -->
+                            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 lg:top-5 lg:left-5 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-2xl border-2 border-white/20 backdrop-blur-md">
+                                <div class="flex items-center gap-2 sm:gap-3">
+                                    <div class="bg-white/20 rounded-lg p-1.5 sm:p-2">
+                                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                                         </svg>
                                     </div>
-                                    <div class="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-4 border-white/30 rounded-full animate-ping"></div>
-                                </button>
-                            </div>
-
-                            <!-- Top Left Stats Badge -->
-                            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 shadow-xl border border-gray-200/50">
-                                <div class="text-center">
-                                    <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-0.5 sm:mb-1">500+</p>
-                                    <p class="text-[10px] sm:text-xs font-semibold text-gray-600 uppercase tracking-wider">Projects Delivered</p>
-                                </div>
-                            </div>
-
-                            <!-- Bottom Stats Card -->
-                            <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 lg:bottom-6 lg:left-6 lg:right-6">
-                                <div class="bg-white/98 backdrop-blur-xl rounded-lg sm:rounded-xl p-2.5 sm:p-3 lg:p-3.5 shadow-xl border border-gray-200/50">
-                                    <div class="grid grid-cols-3 gap-2 sm:gap-3 lg:gap-4 items-center">
-                                        <div class="text-center">
-                                            <p class="text-base sm:text-lg lg:text-xl font-extrabold text-gray-200 leading-tight">98%</p>
-                                            <p class="text-[8px] sm:text-[9px] text-gray-200 font-semibold mt-0.5">Satisfaction</p>
-                                        </div>
-                                        <div class="text-center border-l border-gray-200 pl-2 sm:pl-3 lg:pl-4">
-                                            <p class="text-base sm:text-lg lg:text-xl font-extrabold text-gray-200 leading-tight">+250%</p>
-                                            <p class="text-[8px] sm:text-[9px] text-gray-200 font-semibold mt-0.5">Growth</p>
-                                        </div>
-                                        <div class="text-center border-l border-gray-200 pl-2 sm:pl-3 lg:pl-4">
-                                            <p class="text-base sm:text-lg lg:text-xl font-extrabold text-gray-200 leading-tight">24/7</p>
-                                            <p class="text-[8px] sm:text-[9px] text-gray-200 font-semibold mt-0.5">Support</p>
-                                        </div>
+                                    <div>
+                                        <p class="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight">100+</p>
+                                        <p class="text-[10px] sm:text-xs font-medium text-white/90 uppercase tracking-wider">Projects</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="absolute -right-3 sm:-right-4 lg:-right-6 top-[50%] hidden lg:block">
-                            <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg sm:rounded-xl shadow-xl p-4 sm:p-5 text-white transform rotate-6 hover:rotate-0 transition">
-                                <div class="flex items-center gap-2 sm:gap-3 mb-2">
-                                    <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                    </svg>
-                                    <p class="text-xs sm:text-sm font-bold">Top Rated</p>
+                        <!-- Bottom Stats Card - Now below the image -->
+                        <div class="mt-4 sm:mt-5 lg:mt-6">
+                            <div class="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 shadow-lg border border-gray-200">
+                                <div class="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 items-center">
+                                    <div class="text-center">
+                                        <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-tight">98%</p>
+                                        <p class="text-[10px] sm:text-xs text-gray-600 font-semibold mt-1">Satisfaction</p>
+                                    </div>
+                                    <div class="text-center border-l border-gray-300 pl-3 sm:pl-4 lg:pl-6">
+                                        <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-tight">+250%</p>
+                                        <p class="text-[10px] sm:text-xs text-gray-600 font-semibold mt-1">Growth</p>
+                                    </div>
+                                    <div class="text-center border-l border-gray-300 pl-3 sm:pl-4 lg:pl-6">
+                                        <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 leading-tight">24/7</p>
+                                        <p class="text-[10px] sm:text-xs text-gray-600 font-semibold mt-1">Support</p>
+                                    </div>
                                 </div>
-                                <p class="text-2xl sm:text-3xl font-bold">4.9/5</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute -right-2 sm:-right-3 lg:-right-4 top-[52%] transform -translate-y-1/2 hidden lg:block">
+                            <div class="bg-white/95 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-2xl p-3 sm:p-4 border-2 border-yellow-400/30 hover:border-yellow-400/60 transition-all">
+                                <div class="flex flex-col items-center gap-1.5 sm:gap-2">
+                                    <div class="flex items-center gap-1.5">
+                                        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <p class="text-[10px] sm:text-xs font-bold text-gray-700 uppercase tracking-wider">Top Rated</p>
+                                    </div>
+                                    <div class="flex items-baseline gap-1">
+                                        <p class="text-2xl sm:text-3xl font-black text-gray-900">4.9</p>
+                                        <p class="text-base sm:text-lg font-semibold text-gray-500">/5</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1048,20 +1049,220 @@
                     </div>
         </section>
 
+        <!-- Packages Section -->
+        <section id="packages" class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-blue-100">
+            <div class="max-w-5xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-8 sm:mb-10 lg:mb-12">
+                    <p class="text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-gray-400 mb-2 sm:mb-3">Our Packages</p>
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Choose the Perfect Plan for Your Business</h2>
+                    <p class="text-xs sm:text-sm md:text-base text-gray-600 max-w-2xl mx-auto">Flexible pricing options designed to scale with your needs</p>
+                </div>
+
+                <!-- Packages Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 items-stretch">
+                    <!-- Starter Package -->
+                    <div class="bg-white rounded-lg sm:rounded-xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full">
+                        <div class="p-4 sm:p-5 lg:p-6 flex flex-col flex-grow">
+                            <div class="mb-3 sm:mb-4">
+                                <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-1.5">Starter</h3>
+                                <p class="text-[10px] sm:text-xs text-gray-600">Perfect for small businesses getting started</p>
+                            </div>
+                            <div class="mb-4 sm:mb-5">
+                                <div class="flex items-baseline">
+                                    <span class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">₹1,199</span>
+                                    <span class="text-xs sm:text-sm text-gray-500 ml-1.5 sm:ml-2">/month</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5 flex-grow">
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Basic website development</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">SEO optimization</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Social media management</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Monthly performance reports</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Email support</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="block w-full text-center px-3 sm:px-4 py-2 sm:py-2.5 bg-blue-50 text-gray-900 border-2 border-blue-200 rounded-lg font-semibold text-xs sm:text-sm hover:bg-blue-100 hover:border-blue-300 transition mt-auto">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Professional Package (Featured) -->
+                    <div class="bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg sm:rounded-xl border-2 border-blue-700 shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden relative flex flex-col h-full">
+                        <div class="absolute top-3 right-3 sm:top-4 sm:right-4">
+                            <span class="bg-yellow-400 text-gray-900 text-[9px] sm:text-[10px] font-bold px-2 py-0.5 sm:py-1 rounded-full">POPULAR</span>
+                        </div>
+                        <div class="p-4 sm:p-5 lg:p-6 flex flex-col flex-grow">
+                            <div class="mb-3 sm:mb-4">
+                                <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1 sm:mb-1.5">Professional</h3>
+                                <p class="text-[10px] sm:text-xs text-blue-100">Ideal for growing businesses</p>
+                            </div>
+                            <div class="mb-4 sm:mb-5">
+                                <div class="flex items-baseline">
+                                    <span class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">₹3,199</span>
+                                    <span class="text-xs sm:text-sm text-blue-200 ml-1.5 sm:ml-2">/month</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5 flex-grow">
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Custom web application</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Advanced SEO & content marketing</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Paid advertising campaigns</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Security monitoring</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">AI automation setup</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Weekly performance reports</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-white leading-tight">Priority support</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="block w-full text-center px-3 sm:px-4 py-2 sm:py-2.5 bg-white text-blue-900 rounded-lg font-semibold text-xs sm:text-sm hover:bg-blue-50 transition mt-auto">
+                                Get Started
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Enterprise Package -->
+                    <div class="bg-white rounded-lg sm:rounded-xl border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col h-full">
+                        <div class="p-4 sm:p-5 lg:p-6 flex flex-col flex-grow">
+                            <div class="mb-3 sm:mb-4">
+                                <h3 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-1 sm:mb-1.5">Enterprise</h3>
+                                <p class="text-[10px] sm:text-xs text-gray-600">For large-scale operations</p>
+                            </div>
+                            <div class="mb-4 sm:mb-5">
+                                <div class="flex items-baseline">
+                                    <span class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Custom</span>
+                                </div>
+                                <p class="text-[10px] sm:text-xs text-gray-500 mt-0.5 sm:mt-1">Tailored to your needs</p>
+                            </div>
+                            <ul class="space-y-2 sm:space-y-2.5 mb-4 sm:mb-5 flex-grow">
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Full-stack development</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Complete digital marketing suite</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Enterprise security & compliance</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Advanced AI & automation</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Dedicated account manager</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">24/7 priority support</span>
+                                </li>
+                                <li class="flex items-start gap-1.5 sm:gap-2">
+                                    <svg class="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-[11px] sm:text-xs text-gray-700 leading-tight">Custom SLA & reporting</span>
+                                </li>
+                            </ul>
+                            <a href="#contact" class="block w-full text-center px-3 sm:px-4 py-2 sm:py-2.5 bg-blue-50 text-gray-900 border-2 border-blue-200 rounded-lg font-semibold text-xs sm:text-sm hover:bg-blue-100 hover:border-blue-300 transition mt-auto">
+                                Contact Sales
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note -->
+                <div class="text-center mt-8 sm:mt-10 lg:mt-12">
+                    <p class="text-xs sm:text-sm text-gray-500">All packages include a 30-day money-back guarantee. Custom packages available upon request.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Stats Section -->
-        <section class="py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 bg-blue-100">
+        <section id="stats-section" class="py-4 sm:py-5 lg:py-6 px-4 sm:px-6 lg:px-8 bg-blue-100">
             <div class="max-w-4xl mx-auto">
                 <div class="grid grid-cols-3 gap-2 sm:gap-6 lg:gap-8">
                     <div class="text-center py-4 sm:py-0">
-                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1">98%</p>
+                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1" data-animate-number="98" data-suffix="%">0%</p>
                         <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-500 uppercase tracking-wider font-medium">Client Success</p>
                             </div>
                     <div class="text-center py-4 sm:py-0 border-l border-r border-gray-200">
-                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1">200+</p>
+                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1" data-animate-number="100" data-suffix="+">0+</p>
                         <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-500 uppercase tracking-wider font-medium">Projects Delivered</p>
                         </div>
                     <div class="text-center py-4 sm:py-0">
-                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1">$250K+</p>
+                        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-1" data-animate-number="250" data-prefix="$" data-suffix="K+">$0K+</p>
                         <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-500 uppercase tracking-wider font-medium">Revenue Generated</p>
                     </div>
                 </div>
@@ -1086,21 +1287,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="0">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces" alt="Jacob Williams" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=500&h=500&fit=crop&crop=faces" alt="Rajesh Kumar" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                         </div>
                     </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-blue-50/60 via-indigo-50/50 to-cyan-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Their platform transformed how we approach campaigns. The intuitive tools and seamless integrations saved us countless hours."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">JW</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-blue-50/60 via-indigo-50/50 to-cyan-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Their platform transformed how we approach campaigns. The intuitive tools and seamless integrations saved us countless hours."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">RK</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Jacob Williams</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">CEO at TechVentures</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Rajesh Kumar</h6>
                 </div>
             </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1118,21 +1318,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="1">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=faces" alt="Ethan Reynolds" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=faces" alt="Priya Sharma" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
         </div>
                     </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-purple-50/60 via-pink-50/50 to-blue-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Their marketing approach brought in more foot traffic and online orders. The data-driven insights made all the difference for our business."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">ER</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-purple-50/60 via-pink-50/50 to-blue-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Their marketing approach brought in more foot traffic and online orders. The data-driven insights made all the difference for our business."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">PS</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Ethan Reynolds</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">Owner at Urban Café</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Priya Sharma</h6>
                 </div>
             </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1150,21 +1349,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="2">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=faces" alt="Nathan Carter" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=faces" alt="Arjun Mehta" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                 </div>
             </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-emerald-50/60 via-teal-50/50 to-green-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Their system improved our client engagement and lead conversions dramatically. The easy-to-use tools streamlined our entire sales process."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">NC</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-emerald-50/60 via-teal-50/50 to-green-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Their system improved our client engagement and lead conversions dramatically. The easy-to-use tools streamlined our entire sales process."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">AM</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Nathan Carter</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">Founder at FitLife</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Arjun Mehta</h6>
                     </div>
                 </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1182,21 +1380,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="3">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&h=500&fit=crop&crop=faces" alt="Daniel Foster" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=faces" alt="Amit Patel" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
         </div>
                         </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-amber-50/60 via-orange-50/50 to-yellow-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"They refined our brand's digital presence and increased customer retention. The personalized strategies made a huge impact on our growth."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">DF</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-amber-50/60 via-orange-50/50 to-yellow-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"They refined our brand's digital presence and increased customer retention. The personalized strategies made a huge impact on our growth."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">AP</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Daniel Foster</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">CEO at Prime Realty</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Amit Patel</h6>
                     </div>
                         </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1214,21 +1411,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="4">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=500&h=500&fit=crop&crop=faces" alt="Lucas Bennett" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=faces" alt="Vikram Singh" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                     </div>
                         </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-indigo-50/60 via-violet-50/50 to-purple-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Their platform enhanced project coordination and design workflow. The advanced tools helped us meet deadlines stress-free every time."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">LB</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-indigo-50/60 via-violet-50/50 to-purple-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Their platform enhanced project coordination and design workflow. The advanced tools helped us meet deadlines stress-free every time."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">VS</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Lucas Bennett</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">Lead Architect at DesignPro</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Vikram Singh</h6>
                     </div>
                 </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1246,21 +1442,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="5">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=faces" alt="Sarah Martinez" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces" alt="Neha Desai" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                         </div>
                     </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-pink-50/60 via-rose-50/50 to-fuchsia-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Outstanding service and results! Their team helped us achieve our marketing goals faster than we ever imagined possible."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">SM</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-pink-50/60 via-rose-50/50 to-fuchsia-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Outstanding service and results! Their team helped us achieve our marketing goals faster than we ever imagined possible."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">ND</div>
                                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Sarah Martinez</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">Marketing Director at GrowthCo</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Neha Desai</h6>
                         </div>
                     </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1278,21 +1473,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="6">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=500&h=500&fit=crop&crop=faces" alt="Michael Thompson" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=500&h=500&fit=crop&crop=faces" alt="Karan Reddy" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
                 </div>
             </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-teal-50/60 via-cyan-50/50 to-sky-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"The best investment we've made. Their expertise in digital transformation has revolutionized our entire business operations."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">MT</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-teal-50/60 via-cyan-50/50 to-sky-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"The best investment we've made. Their expertise in digital transformation has revolutionized our entire business operations."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">KR</div>
                                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Michael Thompson</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">CTO at InnovateTech</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Karan Reddy</h6>
         </div>
     </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1310,21 +1504,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="7">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=faces" alt="Emma Wilson" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=faces" alt="Anjali Verma" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
         </div>
                 </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-rose-50/60 via-pink-50/50 to-red-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Exceptional work! They delivered exactly what we needed and exceeded our expectations in every way possible."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">EW</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-rose-50/60 via-pink-50/50 to-red-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Exceptional work! They delivered exactly what we needed and exceeded our expectations in every way possible."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">AV</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">Emma Wilson</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">Founder at StartupHub</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Anjali Verma</h6>
             </div>
                 </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1342,21 +1535,20 @@
                 <div class="testimonial-card absolute w-[200px] xs:w-[220px] sm:w-[260px] md:w-[280px] lg:w-[320px] xl:w-[340px] bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transition-all duration-500 ease-out cursor-pointer hover:shadow-3xl" data-index="8">
                     <!-- Image Section -->
                     <div class="relative h-[160px] sm:h-[180px] md:h-[200px] lg:h-[220px] xl:h-[240px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=faces" alt="James Anderson" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=faces" alt="Rohan Gupta" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent"></div>
                         <div class="absolute top-2 right-2 sm:top-3 sm:right-3 md:top-4 md:right-4">
                             <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
             </div>
                 </div>
                     <!-- Content Section -->
-                    <div class="p-4 sm:p-5 md:p-6 lg:p-7 bg-gradient-to-br from-cyan-50/60 via-blue-50/50 to-sky-50/60">
-                        <p class="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-black leading-relaxed mb-3 sm:mb-4 font-medium italic tracking-wide bonheur-royale">"Professional, reliable, and results-driven. They've become an essential part of our business growth strategy."</p>
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center gap-2 sm:gap-2.5 flex-1 min-w-0">
-                                <div class="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 lg:w-12 lg:h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-[10px] sm:text-xs shadow-lg flex-shrink-0">JA</div>
+                    <div class="p-3 sm:p-4 md:p-4 lg:p-5 bg-gradient-to-br from-cyan-50/60 via-blue-50/50 to-sky-50/60">
+                        <p class="text-[10px] sm:text-xs md:text-sm lg:text-sm text-black leading-snug mb-2 sm:mb-2.5 font-medium italic tracking-wide bonheur-royale">"Professional, reliable, and results-driven. They've become an essential part of our business growth strategy."</p>
+                        <div class="flex items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-1 min-w-0">
+                                <div class="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] shadow-lg flex-shrink-0">RG</div>
                 <div class="min-w-0 flex-1">
-                                    <h6 class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-tight truncate">James Anderson</h6>
-                                    <p class="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium truncate">VP of Operations at ScaleUp</p>
+                                    <h6 class="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 tracking-tight truncate">Rohan Gupta</h6>
             </div>
                 </div>
                             <div class="flex items-center gap-0.5 flex-shrink-0">
@@ -1584,7 +1776,7 @@
                 <div class="absolute bottom-0 right-[5%] sm:right-[10%] w-[30%] sm:w-[28%] z-30 transform rotate-6 hover:rotate-0 transition-transform duration-500">
                     <div class="bg-black rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] p-1 sm:p-1.5 shadow-2xl">
                         <div class="bg-white rounded-[10px] sm:rounded-[14px] lg:rounded-[16px] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=300&h=500&fit=crop" alt="Mobile App" class="w-full h-auto">
+                            <img src="C:\Users\prati\OneDrive\Desktop\berserk-tech\asset\cyber .jpg" alt="Mobile Landing Page" class="w-full h-auto object-cover">
                         </div>
                     </div>
                 </div>
@@ -1603,14 +1795,14 @@
                         <div class="w-1.5 h-6 bg-black rounded-full"></div>
                         <h2 class="text-lg sm:text-xl font-bold text-gray-900">From the Blog</h2>
                     </div>
-                    <a href="#blog" class="text-xs font-medium text-gray-500 hover:text-black transition-colors uppercase tracking-wider">All Articles</a>
+                    <a href="https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true" target="_blank" class="text-xs font-medium text-gray-500 hover:text-black transition-colors uppercase tracking-wider">All Articles</a>
                 </div>
 
                 <!-- Numbered Editorial Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     
                     <!-- Post 1: Web Development -->
-                    <article class="group cursor-pointer">
+                    <article class="group cursor-pointer" onclick="window.open('https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true', '_blank')">
                         <div class="flex items-start gap-3 mb-3">
                             <span class="text-6xl sm:text-5xl font-black text-gray-200 sm:text-gray-100 group-hover:text-blue-100 transition-colors leading-none">01</span>
                             <div class="pt-2">
@@ -1618,7 +1810,7 @@
                             </div>
                         </div>
                         <div class="relative aspect-[16/10] rounded-lg overflow-hidden mb-3">
-                            <video src="https://cdn.dribbble.com/userupload/5062350/file/original-9bebef0a54eaf24b35d03b39f4cac02c.mp4" alt="Web Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" autoplay loop muted playsinline></video>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Web Development" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent pointer-events-none"></div>
                         </div>
                         <h3 class="font-semibold text-gray-900 text-sm sm:text-base leading-snug mb-2 group-hover:text-blue-600 transition-colors">
@@ -1628,7 +1820,7 @@
                     </article>
 
                     <!-- Post 2: Digital Marketing -->
-                    <article class="group cursor-pointer">
+                    <article class="group cursor-pointer" onclick="window.open('https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true', '_blank')">
                         <div class="flex items-start gap-3 mb-3">
                             <span class="text-6xl sm:text-5xl font-black text-gray-200 sm:text-gray-100 group-hover:text-emerald-100 transition-colors leading-none">02</span>
                             <div class="pt-2">
@@ -1636,7 +1828,7 @@
                             </div>
                         </div>
                         <div class="relative aspect-[16/10] rounded-lg overflow-hidden mb-3">
-                            <img src="https://onlinemasters.jou.ufl.edu/wp-content/uploads/2025/03/UF_Digital-Marketing-Strategy.jpg" alt="Digital Marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=800&q=80" alt="Digital Marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/20 to-transparent pointer-events-none"></div>
                         </div>
                         <h3 class="font-semibold text-gray-900 text-sm sm:text-base leading-snug mb-2 group-hover:text-emerald-600 transition-colors">
@@ -1646,7 +1838,7 @@
                     </article>
 
                     <!-- Post 3: Cyber Security -->
-                    <article class="group cursor-pointer">
+                    <article class="group cursor-pointer" onclick="window.open('https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true', '_blank')">
                         <div class="flex items-start gap-3 mb-3">
                             <span class="text-6xl sm:text-5xl font-black text-gray-200 sm:text-gray-100 group-hover:text-violet-100 transition-colors leading-none">03</span>
                             <div class="pt-2">
@@ -1654,7 +1846,7 @@
                             </div>
                         </div>
                         <div class="relative aspect-[16/10] rounded-lg overflow-hidden mb-3">
-                            <img src="asset/customer support post.png" alt="Cyber Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" alt="Cyber Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-semibold text-gray-900 text-sm sm:text-base leading-snug mb-2 group-hover:text-violet-600 transition-colors">
                             Cyber Security Best Practices for Business
@@ -1663,7 +1855,7 @@
                     </article>
 
                     <!-- Post 4: AI Automation -->
-                    <article class="group cursor-pointer">
+                    <article class="group cursor-pointer" onclick="window.open('https://www.linkedin.com/company/berserktechnologies/?viewAsMember=true', '_blank')">
                         <div class="flex items-start gap-3 mb-3">
                             <span class="text-6xl sm:text-5xl font-black text-gray-200 sm:text-gray-100 group-hover:text-amber-100 transition-colors leading-none">04</span>
                             <div class="pt-2">
@@ -1671,7 +1863,7 @@
                             </div>
                         </div>
                         <div class="relative aspect-[16/10] rounded-lg overflow-hidden mb-3">
-                            <img src="asset/medical billing post.png" alt="AI Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80" alt="AI Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         </div>
                         <h3 class="font-semibold text-gray-900 text-sm sm:text-base leading-snug mb-2 group-hover:text-amber-600 transition-colors">
                             AI Automation: Transform Your Business
@@ -1697,52 +1889,81 @@
                     
                     <!-- Left: FAQ Questions -->
                     <div class="space-y-0">
-                        <div class="group py-3 sm:py-4 border-b border-blue-100 cursor-pointer hover:bg-blue-100/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">How does your marketing approach stand out from competitors?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <!-- FAQ 1: Web Development -->
+                        <div class="faq-item border-b border-blue-100">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">What technologies do you use for web development?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">We work with modern technologies including React, Angular, Vue.js for frontend development; Laravel, Django, Spring Boot for backend solutions; Next.js and Express for full-stack applications; and Flutter, React Native for mobile apps. We also build WordPress sites and custom e-commerce platforms with SEO optimization and responsive design.</p>
+                            </div>
                         </div>
-                        <div class="group py-3 sm:py-4 border-b border-blue-100 cursor-pointer hover:bg-blue-100/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">What makes your lead generation strategies effective?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <!-- FAQ 2: Digital Marketing -->
+                        <div class="faq-item border-b border-blue-100">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">What digital marketing services do you offer?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Our digital marketing services include SEO (Search Engine Optimization), PPC advertising, social media marketing, email marketing campaigns, content marketing, and lead generation strategies. We create data-driven campaigns that boost brand visibility, increase traffic, and maximize ROI for your business.</p>
+                            </div>
                         </div>
-                        <div class="group py-3 sm:py-4 border-b border-blue-100 cursor-pointer hover:bg-blue-100/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">How do you accurately measure the success of a campaign?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <!-- FAQ 3: Cyber Security -->
+                        <div class="faq-item border-b border-blue-100">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">How do you ensure our business data is secure?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">We provide comprehensive cybersecurity solutions including security assessments, vulnerability testing, threat monitoring, data protection, compliance management (HIPAA, GDPR), and security training. Our team implements industry-standard security practices and follows best practices to protect your business from cyber threats.</p>
+                            </div>
                         </div>
-                        <div class="group py-3 sm:py-4 border-b border-blue-100 cursor-pointer hover:bg-blue-100/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">How can I easily get started with your services today?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <!-- FAQ 4: AI Automation -->
+                        <div class="faq-item border-b border-blue-100">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">What can AI automation do for my business?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">AI automation can transform your business by streamlining repetitive tasks, improving customer service with AI chatbots, enhancing data analysis, automating workflows, and providing intelligent insights for better decision-making. We help businesses implement AI solutions that reduce costs, increase efficiency, and scale operations.</p>
+                            </div>
                         </div>
-                        <div class="group py-3 sm:py-4 border-b border-blue-100 cursor-pointer hover:bg-blue-100/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">What platforms do you specialize in for digital marketing?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <!-- FAQ 5: Getting Started -->
+                        <div class="faq-item border-b border-blue-100">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">How can I get started with your services?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Getting started is simple! Contact us through our website, email us directly, or connect with us on LinkedIn. We'll schedule a free consultation to understand your business needs, discuss your goals, and provide a customized proposal with transparent pricing and clear timelines.</p>
+                            </div>
                         </div>
-                        <div class="group py-3 sm:py-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
-                            <div class="flex items-start justify-between gap-2 sm:gap-4">
-                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">Do you offer tailored solutions for different industries?</h6>
-                                <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 group-hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+                        <!-- FAQ 6: Custom Solutions -->
+                        <div class="faq-item">
+                            <div class="faq-question py-3 sm:py-4 cursor-pointer hover:bg-blue-100/50 transition-colors flex items-start justify-between gap-2 sm:gap-4">
+                                <h6 class="text-xs sm:text-sm lg:text-base font-medium text-gray-900 leading-snug flex-1 pr-2">Do you offer customized solutions for different industries?</h6>
+                                <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-gray-400 mt-0.5 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
+                            </div>
+                            <div class="faq-answer hidden px-0 pb-3 sm:pb-4">
+                                <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Yes! We specialize in creating tailored solutions for various industries including healthcare, e-commerce, SaaS, FinTech, education, and more. Our team takes time to understand your unique business requirements and delivers customized solutions that align with your industry standards and business goals.</p>
                             </div>
                         </div>
                     </div>
@@ -1767,22 +1988,12 @@
     <!-- Footer -->
     <footer class="bg-black text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 mb-8 sm:mb-12">
                 <div>
                     <a href="#" class="flex items-center space-x-2 mb-4 sm:mb-6">
                         <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-8 sm:h-10 w-auto">
                         <h5 class="text-lg sm:text-xl font-bold">Berserk Technologies</h5>
                     </a>
-                </div>
-                <div>
-                    <h6 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Stay Connected & Informed</h6>
-                    <p class="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm">Subscribe to our newsletter for the marketing insights, trends, & growth strategies to scale your business.</p>
-                    <div class="flex flex-col sm:flex-row gap-2">
-                        <input type="email" placeholder="Email Address" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-900 text-white rounded-lg border border-gray-800 focus:outline-none focus:border-white text-sm sm:text-base">
-                        <button class="px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition text-sm sm:text-base whitespace-nowrap">
-                            Get Notified
-                        </button>
-                    </div>
                 </div>
                 <div class="grid grid-cols-2 gap-6 sm:gap-8">
                     <div>
@@ -1803,7 +2014,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
-                <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-left">Copyright © 2024 – All Right Reserved</p>
+                <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-left">Copyright © 2026 – All Right Reserved</p>
                 <p class="text-xs sm:text-sm text-gray-400 text-center sm:text-right">Created by Berserk Technologies</p>
             </div>
         </div>
