@@ -81,122 +81,326 @@
 
     <!-- Hero Section -->
     <main class="pt-16 sm:pt-20">
-        <section class="relative min-h-[60vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-50 to-purple-100">
-            <div class="max-w-7xl mx-auto w-full text-center">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                    AI & Automation Services
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 font-normal leading-relaxed max-w-3xl mx-auto">
-                    Streamline operations with intelligent automation, machine learning solutions, and AI-powered workflows that boost efficiency.
-                </p>
+        <section class="relative overflow-hidden bg-gradient-to-br from-purple-50 via-indigo-100 to-white">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -top-24 -right-24 w-72 h-72 sm:w-96 sm:h-96 bg-purple-400/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 sm:w-96 sm:h-96 bg-indigo-400/20 blur-3xl rounded-full"></div>
             </div>
-        </section>
-
-        <!-- Services Section -->
-        <section class="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-blue-50">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Business Process Automation</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Automate repetitive business processes to increase efficiency and reduce manual errors.
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-purple-100 text-sm font-semibold text-gray-800 shadow-sm">
+                            <span class="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600"></span>
+                            AI & Automation
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-gray-900">
+                            AI & Automation Services
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
+                            Transform your business with intelligent automation and cutting-edge AI solutions that scale with your needs.
                         </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We identify repetitive tasks in your workflow and automate them using RPA, workflow automation tools, and custom scripts. Our automation solutions handle data entry, report generation, email processing, invoice handling, and other routine tasks, freeing your team to focus on strategic work.
-                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                            <div class="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-white/70 border border-purple-100 p-3 sm:p-4">
+                                <span class="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-purple-600 text-white">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="text-sm sm:text-base font-semibold text-gray-900">80% time saved</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">Automation efficiency</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-white/70 border border-purple-100 p-3 sm:p-4">
+                                <span class="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-indigo-600 text-white">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="text-sm sm:text-base font-semibold text-gray-900">24/7 operations</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">Continuous automation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <a href="index.html#contact" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-xl text-sm sm:text-base font-semibold hover:bg-gray-800 active:bg-gray-900 transition touch-manipulation">
+                                Start a project
+                            </a>
+                            <a href="work.html" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-gray-900 rounded-xl text-sm sm:text-base font-semibold border border-purple-100 hover:bg-purple-50 active:bg-purple-100 transition touch-manipulation">
+                                See our work
+                            </a>
+                        </div>
                     </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Chatbot Development</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Intelligent chatbots that provide 24/7 customer support and automate interactions.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We develop AI-powered chatbots using natural language processing that can handle customer inquiries, provide product information, process orders, schedule appointments, and escalate complex issues to human agents. Our chatbots integrate with your CRM, website, and messaging platforms.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">AI Customer Support Systems</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            AI-powered support systems that handle customer inquiries efficiently and accurately.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            Our AI support systems use machine learning to understand customer intent, provide instant responses, route tickets intelligently, and learn from interactions to improve over time. They integrate with your knowledge base, ticketing system, and provide analytics on customer satisfaction and common issues.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 4 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Workflow Automation (n8n, Zapier, Make)</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Connect and automate workflows across multiple platforms using n8n, Zapier, or Make.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We set up automated workflows that connect your CRM, email, calendar, project management tools, and other business applications. Our automation handles data synchronization, trigger-based actions, multi-step workflows, and error handling. We work with n8n, Zapier, Make, and custom integration solutions.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 5 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Predictive Analytics & Insights</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Leverage AI to predict trends, analyze data, and generate actionable business insights.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We use machine learning models to analyze your business data, predict future trends, identify patterns, and generate insights. Our predictive analytics services include sales forecasting, customer behavior prediction, demand forecasting, risk analysis, and recommendation engines to help you make data-driven decisions.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 6 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Document Processing Automation</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Automate document processing, extraction, and classification using AI technology.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We implement AI-powered document processing systems that automatically extract data from invoices, contracts, forms, and other documents. Our solutions include OCR, intelligent document classification, data validation, and integration with your business systems. This eliminates manual data entry and reduces errors.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 7 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Custom AI Tools / AI Integrations</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Build custom AI solutions and integrate AI capabilities into your existing systems.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We develop custom AI models and integrate AI capabilities like natural language processing, computer vision, recommendation systems, and predictive models into your existing software. Our solutions are tailored to your specific business needs and can be integrated with your current infrastructure and workflows.
-                        </p>
-                    </div>
-
-                    <!-- Service Card 8 -->
-                    <div class="bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow">
-                        <h3 class="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Data Extraction & AI-powered Reporting</h3>
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            Automatically extract data and generate intelligent reports using AI-powered systems.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed">
-                            We build systems that automatically collect data from multiple sources, extract relevant information, analyze patterns, and generate comprehensive reports. Our AI-powered reporting includes automated dashboards, trend analysis, anomaly detection, and personalized insights delivered on schedule or triggered by events.
-                        </p>
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-[0_30px_70px_-30px_rgba(0,0,0,0.45)] border border-purple-100 bg-white">
+                            <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200&q=80" alt="AI Automation hero visual" class="w-full h-[260px] sm:h-[340px] lg:h-[420px] object-cover">
+                        </div>
+                        <div class="mt-3 sm:mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-purple-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">Solutions</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">200+</p>
+                            </div>
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-purple-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">Accuracy</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">99.9%</p>
+                            </div>
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-purple-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">Time Saved</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">80%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section class="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden">
+            <div class="pointer-events-none absolute -left-10 top-10 w-64 h-64 bg-purple-500/10 blur-3xl rounded-full"></div>
+            <div class="pointer-events-none absolute -right-6 top-40 w-72 h-72 bg-indigo-500/10 blur-3xl rounded-full"></div>
+            <div class="max-w-7xl mx-auto relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">AI & Automation Solutions</h2>
+                    <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">Cutting-edge technology to streamline operations and scale your business.</p>
+                </div>
+
+                <div class="space-y-8 sm:space-y-12 lg:space-y-16">
+                    <!-- Service 1 -->
+                    <article id="business-process-automation" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                1
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Business Process Automation</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Eliminate repetitive tasks and boost productivity with intelligent process automation.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                RPA implementation, workflow automation, data entry automation, report generation, email processing, and custom scripting solutions.
+                            </p>
+                        </div>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="Business Process Automation" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article id="chatbot-development" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                2
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">AI Chatbot Development</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Deliver instant, intelligent customer support 24/7 with advanced AI chatbots.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                NLP-powered chatbots, customer inquiry handling, order processing, appointment scheduling, and seamless CRM integration.
+                            </p>
+                        </div>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=1200&q=80" alt="AI Chatbot Development" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article id="ai-customer-support" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                3
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">AI Customer Support</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Scale your support operations with AI that learns and improves with every interaction.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Intent recognition, automated responses, intelligent ticket routing, knowledge base integration, and performance analytics.
+                            </p>
+                        </div>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&q=80" alt="AI Customer Support" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 4 -->
+                    <article id="workflow-automation" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                4
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Workflow Automation</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Connect all your tools and automate complex workflows with n8n, Zapier, and Make.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Multi-platform integration, data synchronization, trigger-based actions, custom workflows, and error handling automation.
+                            </p>
+                        </div>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="Workflow Automation" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article id="predictive-analytics" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                5
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Predictive Analytics</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Forecast trends and make data-driven decisions with advanced machine learning models.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Sales forecasting, customer behavior analysis, demand prediction, risk assessment, and intelligent recommendation engines.
+                            </p>
+                        </div>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        5
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80" alt="Predictive Analytics" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article id="document-automation" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                6
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Document Automation</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Process documents instantly with AI-powered extraction and classification technology.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                OCR technology, intelligent classification, data extraction, validation automation, and seamless system integration.
+                            </p>
+                        </div>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        6
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=1200&q=80" alt="Document Automation" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 7 -->
+                    <article id="custom-ai-solutions" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                7
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Custom AI Solutions</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Build tailored AI solutions that perfectly fit your unique business requirements.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Custom model development, NLP integration, computer vision, recommendation systems, and infrastructure integration.
+                            </p>
+                        </div>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        7
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1655635949384-f737c5133dfe?w=1200&q=80" alt="Custom AI Solutions" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 8 -->
+                    <article id="ai-powered-reporting" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-purple-50 border-2 border-purple-200 text-xs sm:text-sm font-bold text-purple-700 mb-3 sm:mb-4">
+                                8
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">AI-Powered Reporting</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Generate intelligent reports automatically with AI-driven data analysis and insights.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Automated dashboards, multi-source data collection, trend analysis, anomaly detection, and scheduled reporting.
+                            </p>
+                        </div>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-purple-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-purple-200 text-sm font-bold text-purple-700 shadow-lg">
+                                        8
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="AI-Powered Reporting" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
-        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+        <section class="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80');"></div>
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+            <!-- Content -->
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                     Ready to Automate Your Business?
                 </h2>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
                     Let's discuss how our AI & automation services can transform your operations.
                 </p>
-                <a href="index.html#contact" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                <a href="index.html#contact" class="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-200 active:bg-gray-300 transition touch-manipulation">
                     Get Started
                 </a>
             </div>
@@ -204,18 +408,42 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 mb-8">
+    <footer class="bg-gray-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-14">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
                 <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 sm:mb-6">
-                        <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-8 sm:h-10 w-auto">
-                        <h5 class="text-lg sm:text-xl font-bold">Berserk Technologies</h5>
-                    </a>
+                    <div class="flex items-center gap-3">
+                        <img src="asset/logo_removedBG.png" alt="Berserk Technologies" class="h-10 w-auto bg-white/10 rounded-lg p-1.5">
+                        <div>
+                            <p class="font-extrabold text-lg">Berserk Technologies</p>
+                            <p class="text-sm text-gray-400">Web • Security • AI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mt-4 leading-relaxed">
+                        We build modern web solutions that look great, load fast, and scale with your business.
+                    </p>
                 </div>
                 <div>
-                    <h6 class="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Stay Connected & Informed</h6>
-                    <p class="text-gray-400 mb-3 sm:mb-4 text-xs sm:text-sm">Subscribe to our newsletter for the marketing insights, trends, & growth strategies to scale your business.</p>
+                    <p class="font-bold mb-4">Company</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a class="hover:text-white transition" href="index.html#about">About</a></li>
+                        <li><a class="hover:text-white transition" href="index.html#testimonials">Testimonials</a></li>
+                        <li><a class="hover:text-white transition" href="index.html#blog">Blog</a></li>
+                        <li><a class="hover:text-white transition" href="work.html">Work</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Services</p>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a class="hover:text-white transition" href="web-development.html">Web Development</a></li>
+                        <li><a class="hover:text-white transition" href="digital-marketing.html">Digital Marketing</a></li>
+                        <li><a class="hover:text-white transition" href="cybersecurity.html">Cybersecurity</a></li>
+                        <li><a class="hover:text-white transition" href="ai-automation.html">AI & Automation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4">Stay Connected & Informed</h6>
+                    <p class="text-gray-300 mb-3 sm:mb-4 text-xs sm:text-sm leading-relaxed">Subscribe to our newsletter for the marketing insights, trends, & growth strategies to scale your business.</p>
                     <div class="flex flex-col sm:flex-row gap-2">
                         <input type="email" placeholder="Email Address" class="flex-1 px-3 sm:px-4 py-2 sm:py-2.5 bg-gray-800 text-white rounded-lg border border-gray-700 focus:outline-none focus:border-white text-sm sm:text-base">
                         <button class="px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition text-sm sm:text-base whitespace-nowrap">
@@ -224,8 +452,12 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-6 sm:pt-8 text-center">
-                <p class="text-gray-400 text-xs sm:text-sm">&copy; 2026 Berserk Technologies. All rights reserved.</p>
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <p class="text-gray-400 text-sm">&copy; 2026 Berserk Technologies. All rights reserved.</p>
+                <div class="flex items-center gap-4 text-sm text-gray-400">
+                    <a class="hover:text-white transition" href="index.html#contact">Privacy</a>
+                    <a class="hover:text-white transition" href="index.html#contact">Terms</a>
+                </div>
             </div>
         </div>
     </footer>
