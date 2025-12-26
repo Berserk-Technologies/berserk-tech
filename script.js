@@ -475,19 +475,85 @@ function closeContactModal(event) {
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
             const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            const data = {
+                name: formData.get('name'),
+                phone: formData.get('phone') || '',
+                email: formData.get('email'),
+                message: formData.get('message')
+            };
             
-            // Here you can add your form submission logic
-            // For now, we'll just show a success message
-            alert('Thank you for contacting us! We will get back to you soon.');
+            // Get submit button
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
             
-            // Close modal and reset form
-            closeContactModal();
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+            submitButton.classList.add('opacity-75', 'cursor-not-allowed');
+            
+            try {
+                // API endpoint - change this to your production API URL when deploying
+                const API_URL = 'http://localhost:3000/api/send-email';
+                
+                // Send data to API
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Success
+                    submitButton.textContent = '✓ Sent!';
+                    submitButton.classList.remove('bg-black', 'hover:bg-gray-800');
+                    submitButton.classList.add('bg-green-600');
+                    
+                    // Show success message
+                    setTimeout(() => {
+                        alert('Thank you for contacting us! We will get back to you soon.');
+                        // Close modal and reset form
+                        closeContactModal();
+                        // Reset button
+                        submitButton.disabled = false;
+                        submitButton.textContent = originalButtonText;
+                        submitButton.classList.remove('opacity-75', 'cursor-not-allowed', 'bg-green-600');
+                        submitButton.classList.add('bg-black', 'hover:bg-gray-800');
+                    }, 500);
+                } else {
+                    // Error from API
+                    const errorMessage = result.message || 'Failed to send email. Please try again.';
+                    throw new Error(errorMessage);
+                }
+            } catch (error) {
+                // Network error or API error
+                console.error('Error sending email:', error);
+                
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                submitButton.classList.remove('opacity-75', 'cursor-not-allowed');
+                
+                // Show appropriate error message
+                let errorMessage = 'Sorry, there was an error sending your message. ';
+                if (error.message.includes('fetch')) {
+                    errorMessage += 'Please check your internet connection and try again.';
+                } else if (error.message) {
+                    errorMessage += error.message;
+                } else {
+                    errorMessage += 'Please try again later or contact us directly via phone or email.';
+                }
+                
+                alert(errorMessage);
+            }
         });
     }
 
