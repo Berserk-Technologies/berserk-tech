@@ -119,271 +119,323 @@
 
     <!-- Hero Section -->
     <main class="pt-16 sm:pt-20">
-        <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&q=80" alt="Digital Marketing" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/90 via-blue-900/85 to-purple-900/90"></div>
+        <section class="relative overflow-hidden bg-gradient-to-br from-emerald-50 via-green-100 to-white">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute -top-24 -right-24 w-72 h-72 sm:w-96 sm:h-96 bg-emerald-400/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-72 h-72 sm:w-96 sm:h-96 bg-green-400/20 blur-3xl rounded-full"></div>
             </div>
-            <div class="relative z-10 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20">
-                <div class="text-center text-white">
-                    <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
-                        Digital Marketing <span class="text-emerald-400">Excellence</span>
-                    </h1>
-                    <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 font-normal leading-relaxed max-w-4xl mx-auto mb-10">
-                        Transform your brand with data-driven strategies that deliver measurable growth and ROI
-                    </p>
-                    <button onclick="openContactModal()" class="inline-block px-10 py-4 bg-emerald-500 text-white rounded-lg text-lg font-semibold hover:bg-emerald-600 transition shadow-xl hover:shadow-2xl">
-                        Start Growing Today
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-emerald-600 mb-2">300%</div>
-                        <div class="text-gray-600 font-medium">Average ROI Increase</div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 lg:py-20">
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-emerald-100 text-sm font-semibold text-gray-800 shadow-sm">
+                            <span class="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-r from-emerald-600 to-green-600"></span>
+                            Digital Marketing
+                        </div>
+                        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-gray-900">
+                            Digital Marketing Services
+                        </h1>
+                        <p class="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
+                            Transform your brand with data-driven strategies that deliver measurable growth and exceptional ROI across all digital channels.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                            <div class="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-white/70 border border-emerald-100 p-3 sm:p-4">
+                                <span class="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-emerald-600 text-white">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="text-sm sm:text-base font-semibold text-gray-900">Data-driven strategies</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">Performance backed by analytics.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 sm:gap-3 rounded-lg sm:rounded-xl bg-white/70 border border-emerald-100 p-3 sm:p-4">
+                                <span class="flex-shrink-0 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-green-600 text-white">
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </span>
+                                <div class="min-w-0">
+                                    <p class="text-sm sm:text-base font-semibold text-gray-900">Measurable ROI</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">Track every dollar invested.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                            <button onclick="openContactModal()" class="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 sm:py-3 bg-black text-white rounded-xl text-sm sm:text-base font-semibold hover:bg-gray-800 active:bg-gray-900 transition touch-manipulation">
+                                Start Growing Today
+                            </button>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-blue-600 mb-2">150+</div>
-                        <div class="text-gray-600 font-medium">Campaigns Launched</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-purple-600 mb-2">50M+</div>
-                        <div class="text-gray-600 font-medium">People Reached</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-4xl md:text-5xl font-bold text-orange-600 mb-2">98%</div>
-                        <div class="text-gray-600 font-medium">Client Satisfaction</div>
+                    <div class="relative">
+                        <div class="relative rounded-2xl overflow-hidden shadow-[0_30px_70px_-30px_rgba(0,0,0,0.45)] border border-emerald-100 bg-white">
+                            <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=1200&q=80" alt="Digital marketing hero visual" class="w-full h-[260px] sm:h-[340px] lg:h-[420px] object-cover">
+                        </div>
+                        <div class="mt-3 sm:mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-emerald-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">ROI</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">300%+ Avg</p>
+                            </div>
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-emerald-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">Campaigns</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">150+</p>
+                            </div>
+                            <div class="rounded-lg sm:rounded-xl bg-white/80 border border-emerald-100 p-2 sm:p-3 text-center shadow-sm">
+                                <p class="text-[10px] sm:text-xs text-gray-500">Reach</p>
+                                <p class="text-xs sm:text-sm lg:text-base font-bold text-gray-900">50M+</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Digital Marketing Services</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive solutions to elevate your brand and dominate your market</p>
+        <section class="relative py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden">
+            <div class="pointer-events-none absolute -left-10 top-10 w-64 h-64 bg-emerald-500/10 blur-3xl rounded-full"></div>
+            <div class="pointer-events-none absolute -right-6 top-40 w-72 h-72 bg-green-500/10 blur-3xl rounded-full"></div>
+            <div class="max-w-7xl mx-auto relative">
+                <div class="text-center mb-12 sm:mb-16">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Our Digital Marketing Services</h2>
+                    <p class="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">Comprehensive solutions to elevate your brand and dominate your market with data-driven strategies.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Service Card 1 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&q=80" alt="SEO Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">SEO Optimization</h3>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                <div class="space-y-8 sm:space-y-12 lg:space-y-16">
+                    <!-- Service 1 -->
+                    <article id="seo" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                1
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">SEO Optimization</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Dominate search results with proven SEO strategies that drive organic traffic and qualified leads.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Keyword research, on-page optimization, technical SEO audits, link building, content optimization, local SEO, and ongoing performance monitoring.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                We provide comprehensive SEO services including keyword research, on-page optimization, technical SEO audits, link building, content optimization, local SEO, and ongoing performance monitoring to ensure your website ranks at the top of search results.
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Service Card 2 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" alt="Social Media Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Social Media Marketing</h3>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200&q=80" alt="SEO Optimization" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    </article>
+
+                    <!-- Service 2 -->
+                    <article id="social-media" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                2
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Social Media Marketing</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Build a powerful social presence that engages audiences and drives brand loyalty across all platforms.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Content creation, community management, influencer partnerships, social advertising, analytics tracking, and growth strategies for all major platforms.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Our social media services include content creation, community management, influencer partnerships, social advertising, analytics tracking, and growth strategies for Facebook, Instagram, LinkedIn, Twitter, and TikTok.
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Service Card 3 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&q=80" alt="Google Ads" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Google & Meta Ads</h3>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        2
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1579869847557-1f67382cc158?w=1200&q=80" alt="Social Media Marketing" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    </article>
+
+                    <!-- Service 3 -->
+                    <article id="paid-ads" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                3
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Google & Meta Ads</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Maximize ROI with targeted ad campaigns on Google and Meta platforms that convert browsers into buyers.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Campaign strategy, audience targeting, creative development, A/B testing, bid optimization, conversion tracking, and performance analytics.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                We create and manage high-performing ad campaigns with campaign strategy, audience targeting, creative development, A/B testing, bid optimization, conversion tracking, and detailed performance analytics.
                             </p>
                         </div>
-                    </div>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=1200&q=80" alt="Google and Meta Ads" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
 
-                    <!-- Service Card 4 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Performance Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Performance Marketing</h3>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
-                                Data-driven campaigns focused on measurable results, optimized for maximum performance and ROI.
-                            </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Analytics setup, conversion tracking, marketing attribution, funnel optimization, A/B testing, and comprehensive performance reporting.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Service Card 5 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=800&q=80" alt="Content Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Content Marketing</h3>
-                        </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    <!-- Service 4 -->
+                    <article id="content-marketing" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                4
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Content Marketing</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Create compelling content that attracts, engages, and converts your target audience at every stage.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Blog posts, articles, infographics, videos, case studies, whitepapers, SEO content, and strategic content distribution.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                We develop strategic content including blog posts, articles, infographics, videos, case studies, whitepapers, SEO-optimized content, and manage strategic content distribution across all channels.
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Service Card 6 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" alt="Email Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Email Marketing</h3>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="Content Marketing" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    </article>
+
+                    <!-- Service 5 -->
+                    <article id="email-marketing" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                5
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Email Marketing</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Nurture relationships and drive conversions with personalized email campaigns that deliver results.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Campaign design, automation, segmentation, A/B testing, deliverability optimization, and comprehensive analytics.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Our email marketing services include campaign design, marketing automation, list segmentation, A/B testing, deliverability optimization, and comprehensive analytics to maximize open rates and conversions.
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Service Card 7 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Branding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Branding & Strategy</h3>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        5
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=1200&q=80" alt="Email Marketing" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    </article>
+
+                    <!-- Service 6 -->
+                    <article id="performance-marketing" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                6
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Performance Marketing</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
+                                Data-driven campaigns focused on measurable results, optimized for maximum performance and ROI.
+                            </p>
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                We implement analytics setup, conversion tracking, marketing attribution, funnel optimization, comprehensive A/B testing, and detailed performance reporting to ensure every marketing dollar counts.
+                            </p>
+                        </div>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        6
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=1200&q=80" alt="Performance Marketing" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Service 7 -->
+                    <article id="branding" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 lg:order-1 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                7
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Branding & Strategy</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Build a powerful brand identity that resonates with your audience and stands out in the market.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                Brand strategy, visual identity, logo design, brand guidelines, messaging framework, and creative campaign development.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                We develop comprehensive brand strategy, visual identity systems, logo design, brand guidelines, messaging frameworks, and creative campaign development to establish your unique market position.
                             </p>
                         </div>
-                    </div>
-
-                    <!-- Service Card 8 -->
-                    <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                        <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="CRO" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <h3 class="absolute bottom-6 left-6 text-3xl font-bold text-white">Conversion Optimization</h3>
+                        <div class="order-1 lg:order-2 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        7
+                                    </div>
+                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&q=80" alt="Branding and Strategy" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <p class="text-gray-600 mb-4 text-lg leading-relaxed">
+                    </article>
+
+                    <!-- Service 8 -->
+                    <article id="conversion-optimization" class="group grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
+                        <div class="order-2 px-2 sm:px-0">
+                            <div class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-50 border-2 border-blue-200 text-xs sm:text-sm font-bold text-blue-700 mb-3 sm:mb-4">
+                                8
+                            </div>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Conversion Optimization</h3>
+                            <p class="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-3 sm:mb-4">
                                 Turn more visitors into customers with scientific optimization that maximizes every interaction.
                             </p>
-                            <p class="text-gray-500 leading-relaxed">
-                                UX analysis, A/B testing, landing page optimization, funnel improvement, heatmap analysis, and conversion tracking.
+                            <p class="text-xs sm:text-sm lg:text-base text-gray-600 leading-relaxed">
+                                Our CRO services include UX analysis, multivariate A/B testing, landing page optimization, funnel improvement, heatmap analysis, user behavior tracking, and conversion tracking to boost your conversion rates.
                             </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
-        <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose Our Digital Marketing Services?</h2>
-                        <p class="text-xl text-gray-600 mb-8">
-                            We combine creativity with data-driven strategies to deliver marketing campaigns that not only look great but drive real business results.
-                        </p>
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
+                        <div class="order-1 relative px-2 sm:px-0">
+                            <div class="relative rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl border border-emerald-100">
+                                <div class="absolute top-3 left-3 lg:hidden z-20">
+                                    <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/95 backdrop-blur-sm border-2 border-blue-200 text-sm font-bold text-blue-700 shadow-lg">
+                                        8
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Data-Driven Strategies</h3>
-                                    <p class="text-gray-600">Every decision backed by analytics and real performance data</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Proven Track Record</h3>
-                                    <p class="text-gray-600">150+ successful campaigns with measurable ROI increases</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Full-Service Agency</h3>
-                                    <p class="text-gray-600">End-to-end solutions from strategy to execution and optimization</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold text-gray-900 mb-1">Transparent Reporting</h3>
-                                    <p class="text-gray-600">Regular updates and clear metrics so you always know your ROI</p>
-                                </div>
+                                <div class="absolute inset-0 bg-blue-900/25 z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=1200&q=80" alt="Conversion Optimization" class="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-105">
                             </div>
                         </div>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Marketing Team" class="rounded-2xl shadow-2xl">
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+        <section class="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 text-white overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1557838923-2985c318be48?w=1920&q=80');"></div>
+            <!-- Black Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+            <!-- Content -->
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
                     Ready to Boost Your Online Presence?
                 </h2>
-                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                <p class="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 px-2">
                     Let's discuss how our digital marketing services can drive growth for your business.
                 </p>
-                <button onclick="openContactModal()" class="inline-block px-8 py-4 bg-white text-black rounded-lg text-lg font-semibold hover:bg-gray-200 transition">
+                <button onclick="openContactModal()" class="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-black rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-200 active:bg-gray-300 transition touch-manipulation">
                     Get Started
                 </button>
             </div>
