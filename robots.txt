@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://berserktechnologies.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow unnecessary directories
+Disallow: /asset/intro_video.mp4
+

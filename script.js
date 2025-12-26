@@ -498,7 +498,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             try {
                 // API endpoint - change this to your production API URL when deploying
-                const API_URL = 'http://localhost:3000/api/send-email';
+                //const API_URL = 'http://localhost:3000/api/send-email';
+                const API_URL = 'https://node-smtp-for-berserk-website.onrender.com/api/send-email';
                 
                 // Send data to API
                 const response = await fetch(API_URL, {
