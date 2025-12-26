@@ -448,3 +448,161 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Contact Modal Functions
+function openContactModal() {
+    const modal = document.getElementById('contactModal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeContactModal(event) {
+    if (!event || event.target === event.currentTarget) {
+        const modal = document.getElementById('contactModal');
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            const form = document.getElementById('contactForm');
+            if (form) {
+                form.reset();
+            }
+        }
+    }
+}
+
+// Initialize Contact Form
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you can add your form submission logic
+            // For now, we'll just show a success message
+            alert('Thank you for contacting us! We will get back to you soon.');
+            
+            // Close modal and reset form
+            closeContactModal();
+        });
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeContactModal();
+        }
+    });
+});
+
+// Web Development Page - Horizontal Scrollers
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollers = document.querySelectorAll('[data-scroller]');
+    scrollers.forEach((scroller) => {
+        const root = scroller.closest('article') || scroller.parentElement;
+        const prev = root ? root.querySelector('.scroller-prev') : null;
+        const next = root ? root.querySelector('.scroller-next') : null;
+
+        const step = () => Math.max(280, Math.floor(scroller.clientWidth * 0.85));
+
+        prev?.addEventListener('click', () => {
+            scroller.scrollBy({ left: -step(), behavior: 'smooth' });
+        });
+        next?.addEventListener('click', () => {
+            scroller.scrollBy({ left: step(), behavior: 'smooth' });
+        });
+    });
+});
+
+// Web Development Page - Modal Functions
+function openModal(url) {
+    const modal = document.getElementById('websiteModal');
+    const iframe = document.getElementById('websiteFrame');
+    
+    if (modal && iframe) {
+        iframe.src = url;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        // Reset to desktop view when opening
+        setView('desktop');
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('websiteModal');
+    const iframe = document.getElementById('websiteFrame');
+    
+    if (modal && iframe) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        iframe.src = '';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function setView(view) {
+    const modal = document.getElementById('websiteModal');
+    const buttons = document.querySelectorAll('.view-toggle-btn');
+    
+    if (modal) {
+        // Remove all view classes
+        modal.classList.remove('view-desktop', 'view-tablet', 'view-mobile');
+        // Add selected view class
+        modal.classList.add('view-' + view);
+        
+        // Update button states
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        const viewBtn = document.getElementById('view-' + view + '-btn');
+        if (viewBtn) {
+            viewBtn.classList.add('active');
+        }
+    }
+}
+
+// Close modal on escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Close modal when clicking outside
+document.addEventListener('DOMContentLoaded', function() {
+    const websiteModal = document.getElementById('websiteModal');
+    if (websiteModal) {
+        websiteModal.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    }
+});
+
+// Web Development Page - Toggle expand all examples
+function toggleExpandAll(serviceId) {
+    const container = document.querySelector(`[data-service="${serviceId}"].examples-container`);
+    const navButtons = document.querySelector(`[data-service="${serviceId}"].navigation-buttons`);
+    const viewAllBtn = document.querySelector(`[data-service="${serviceId}"].view-all-btn`);
+    
+    if (container && viewAllBtn) {
+        if (container.classList.contains('expanded')) {
+            // Collapse
+            container.classList.remove('expanded');
+            viewAllBtn.textContent = 'View all';
+            if (navButtons) navButtons.style.display = 'flex';
+        } else {
+            // Expand
+            container.classList.add('expanded');
+            viewAllBtn.textContent = 'Show less';
+            if (navButtons) navButtons.style.display = 'none';
+        }
+    }
+}
+
