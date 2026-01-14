@@ -497,9 +497,17 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.classList.add('opacity-75', 'cursor-not-allowed');
             
             try {
-                // API endpoint - change this to your production API URL when deploying
-                //const API_URL = 'http://localhost:3000/api/send-email';
-                const API_URL = 'https://node-smtp-for-berserk-website.onrender.com/api/send-email';
+                // API endpoint - Automatically uses correct URL based on environment
+                // For local development: http://localhost:3000/api/contact
+                // For production: https://berserk-backend.onrender.com/api/contact
+                const isLocalhost = window.location.hostname === 'localhost' || 
+                                   window.location.hostname === '127.0.0.1' || 
+                                   window.location.protocol === 'file:';
+                const API_URL = isLocalhost 
+                    ? 'http://localhost:3000/api/contact'
+                    : 'https://berserk-backend.onrender.com/api/contact';
+                
+                console.log('Sending contact form to:', API_URL);
                 
                 // Send data to API
                 const response = await fetch(API_URL, {
@@ -512,7 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const result = await response.json();
                 
-                if (response.ok && result.success) {
+                if (response.ok && result.status === 'success') {
                     // Success
                     submitButton.textContent = '✓ Sent!';
                     submitButton.classList.remove('bg-black', 'hover:bg-gray-800');
